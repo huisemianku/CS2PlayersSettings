@@ -1,0 +1,276 @@
+﻿@page
+@model CS2PlayersSettings.Pages.ExcelImportD.ImportDataByExcelModel
+@{
+}
+<script src="~/js/filepond.js"></script>
+<script src="~/js/filepond-plugin-file-validate-size.min.js"></script>
+<link href="~/css/filepond.min.css" rel="stylesheet" />
+<style>
+    .filepond--credits {
+        display: none !important;
+    }
+</style>
+<div class="w-[970px] cursor-pointer mx-auto">
+    <form method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+        <div class="w-full h-full">
+            <input type="file" class="filepond h-full" id="filepond" name="ExcelFile" />
+        </div>
+    </form>
+</div>
+<div class="w-[970px] mx-auto bg-white rounded-md font-mono">
+    <div class="py-5 px-5">
+        <div class="text-red-500 font-mono">请将Excel中的表头的顺序与下方保持一致</div>
+        <div>
+            <table id="excelHeaderHint">
+                <tbody id="headerList" class="text-gray-500 flex flex-row flex-wrap"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="w-[970px] mx-auto my-5 mx-5 border-b  border-b-gary-500"></div>
+<div class="w-[970px] cursor-pointer mx-auto">
+    <form method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+        <div class="w-full h-full">
+            <input type="file" class="filepond h-full" id="filepondTeam" name="ExcelTeamFile" />
+        </div>
+    </form>
+</div>
+<div class="w-[970px] mx-auto bg-white rounded-md font-mono">
+    <div class="py-5 px-5">
+        <div class="text-red-500 font-mono">请将Excel中的表头的顺序与下方保持一致</div>
+        <div>
+            <table id="excelHeaderHint">
+                <tbody id="headerList" class="text-gray-500 flex flex-row flex-wrap"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+    const csrfToken = document.querySelector('input[name="__RequestVerificationToken"]').value;
+
+    // 初始化 FilePond
+    FilePond.registerPlugin(FilePondPluginFileValidateSize);
+    const pond = FilePond.create(document.querySelector('input[type="file"]'), {
+        allowMultiple: false,
+        maxFiles: 1,
+        acceptedFileTypes: ['.xslx'],
+        maxFileSize: '30MB',
+        labelIdle: '拖拽 .xslx 文件到这里或点击选择文件',
+        labelFileProcessing: '上传中...',
+        labelFileProcessingComplete: '上传完成',
+        labelFileProcessingAborted: '上传已取消',
+        labelFileProcessingError: '上传出错',
+        labelTapToCancel: '点击取消',
+        labelTapToRetry: '点击重试',
+        labelTapToUndo: '点击撤销',
+        server: {
+            process: {
+                url: '?handler=UploadExcel',
+                method: 'POST',
+                withCredentials: false,
+                headers: {
+                    'RequestVerificationToken': csrfToken
+                },
+                ondata: (formData) => {
+                    console.log('准备上传文件...');
+                    return formData;
+                },
+                onload: (response) => {
+                    try {
+                        const result = JSON.parse(response);
+                        if (result.success) {
+                            showMsg('success',result.message);
+                            // 返回文件路径，这将作为 revert 请求的参数
+                            return result.filePath;
+                        } else {
+                            alert(result.message || '上传失败');
+                            return null;
+                        }
+                    } catch (e) {
+                        console.error('解析响应失败:', e);
+                        alert('上传过程出现错误');
+                        return null;
+                    }
+                },
+                onerror: (response) => {
+                    console.error('上传错误:', response);
+                    alert('上传失败，请检查文件格式或重试');
+                },
+                @* revert: (uniqueFileId, load, error) => {
+                    // uniqueFileId 是 process 返回的标识符（例如文件名）
+                    fetch('?handler=Revert', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'RequestVerificationToken': csrfToken
+                        },
+                        body: JSON.stringify(uniqueFileId) // 发送文件名或标识符
+                    })
+                        .then(response => {
+                            if (response.ok) {
+                                console.log('文件已自动删除:', uniqueFileId);
+                                load(); // 通知 FilePond 删除成功
+                            } else {
+                                console.error('文件删除请求失败');
+                                error('删除失败');
+                            }
+                            return response.json();
+                        })
+                        .then(data => {
+                            console.log('服务器响应:', data);
+                        })
+                        .catch(err => {
+                            console.error('删除文件错误:', err);
+                            error('删除错误');
+                        });
+                } *@
+            }
+        }
+    });
+    const teamPond = FilePond.create(document.querySelector('#filepondTeam'), {
+        allowMultiple: false,
+        maxFiles: 1,
+        acceptedFileTypes: ['.xslx'],
+        maxFileSize: '30MB',
+        labelIdle: '拖拽 .xslx 文件到这里或点击选择文件',
+        labelFileProcessing: '上传中...',
+        labelFileProcessingComplete: '上传完成',
+        labelFileProcessingAborted: '上传已取消',
+        labelFileProcessingError: '上传出错',
+        labelTapToCancel: '点击取消',
+        labelTapToRetry: '点击重试',
+        labelTapToUndo: '点击撤销',
+        server: {
+            process: {
+                url: '?handler=UploadTeamExcel',
+                method: 'POST',
+                withCredentials: false,
+                headers: {
+                    'RequestVerificationToken': csrfToken
+                },
+                ondata: (formData) => {
+                    console.log('准备上传文件...');
+                    return formData;
+                },
+                onload: (response) => {
+                    try {
+                        const result = JSON.parse(response);
+                        if (result.success) {
+                            console.log('文件上传成功:', result.message);
+                            // 返回文件路径，这将作为 revert 请求的参数
+                            showMsg("success", result.message);
+                            return result.filePath;
+                        } else {
+                            alert(result.message || '上传失败');
+                            return null;
+                        }
+                    } catch (e) {
+                        console.error('解析响应失败:', e);
+                        alert('上传过程出现错误');
+                        return null;
+                    }
+                },
+                onerror: (response) => {
+                    console.error('上传错误:', response);
+                    alert('上传失败，请检查文件格式或重试');
+                },
+                @* revert: (uniqueFileId, load, error) => {
+                    // uniqueFileId 是 process 返回的标识符（例如文件名）
+                    fetch('?handler=Revert', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'RequestVerificationToken': csrfToken
+                        },
+                        body: JSON.stringify(uniqueFileId) // 发送文件名或标识符
+                    })
+                        .then(response => {
+                            if (response.ok) {
+                                console.log('文件已自动删除:', uniqueFileId);
+                                load(); // 通知 FilePond 删除成功
+                            } else {
+                                console.error('文件删除请求失败');
+                                error('删除失败');
+                            }
+                            return response.json();
+                        })
+                        .then(data => {
+                            console.log('服务器响应:', data);
+                        })
+                        .catch(err => {
+                            console.error('删除文件错误:', err);
+                            error('删除错误');
+                        });
+                } *@
+            }
+        }
+    });
+
+    function showMsg(type, title) {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "top",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer;
+                toast.onmouseleave = Swal.resumeTimer;
+            }
+        });
+        Toast.fire({
+            icon: type,
+            title: title
+        });
+    }
+
+
+
+    // 监听上传完成事件，清理界面
+    pond.on('processfile', (error, file) => {
+        if (!error) {
+            console.log(`文件 ${file.filename} 上传完成`);
+            // 延迟 3 秒后清除文件
+            setTimeout(() => {
+                pond.removeFile(file.id); // 清除文件
+            }, 3000);
+        } else {
+            console.error('文件处理失败:', error);
+        }
+    });
+    function excelHeaderMsg() {
+        const stringHeaders = [
+            "NickName", "Team", "MouseName", "MouseDPI", "MouseSensitivity", "MouseEDPI", "ZoomSensitivity",
+            "MouseHz", "WindowsSens", "viewModelFOV", "viewModelOffsetX", "viewModelOffsetY", "viewModelOffsetZ",
+            "ViewModelPresetpos", "Resolution", "AspectRatio", "ScalingMode", "DisplayMode",
+            "Crosshaircode"
+        ];
+
+        const headerList = document.querySelector('#headerList');
+
+        stringHeaders.forEach((headerText, index) => {
+            const listItem = document.createElement('tr'); // Changed to <tr> for consistency
+
+            const indexCell = document.createElement('td'); // Changed to <td> for consistency
+            indexCell.textContent = (index + 1) + '、';
+
+            const headerCell = document.createElement('td'); // Changed to <td> for consistency
+            headerCell.textContent = headerText;
+            headerCell.classList.add('px-1', 'py-1')
+
+            listItem.appendChild(indexCell);
+            listItem.appendChild(headerCell);
+            listItem.classList.add('flex', 'items-center', 'mb-1');
+
+            headerList.appendChild(listItem);
+        });
+    }
+
+
+</script>

@@ -1,0 +1,51 @@
+# Binaries obj and Packages directory
+/[Oo]bj/
+/[Bb]in/
+/packages/
+/props/
+
+# Visual Studio options user specific files
+*.suo
+*.user
+*.sln.docstates
+*.vspscc
+*.vssscc
+*.csproj.user
+*.csproj.vspscc
+*.fsproj.user
+*.fsproj.vspscc
+*.vbproj.user
+*.vbproj.vspscc
+*.dbmdl
+*.dbproj.schemaview
+*/_ReSharper*/
+[Tt]est[Rr]esult*
+[Bb]uild[Ll]og.*
+*.cache
+*.nupkg
+# NuGet Packages
+packages/
+artifacts/
+/ClientApp/node_modules/
+
+# Files that Visual Studio keeps track of but we don't want to track
+*.orig
+*.rej
+
+# Don't track temporary auto-generated files
+*.rpt
+*.tmp
+*.dcu
+*.err
+*.log
+
+# Others
+*.DS_Store
+/publish/
+/Properties/PublishProfiles/*.*
+/.vscode/
+/out/
+/dist/
+
+# Rider directories with .idea prefix
+.idea/

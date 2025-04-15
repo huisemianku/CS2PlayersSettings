@@ -1,0 +1,413 @@
+﻿@page
+@model CS2PlayersSettings.Pages.PlayerFile.PlayerAddModel
+@{
+}
+<script src="~/js/filepond.js"></script>
+<script src="~/js/filepond-plugin-file-validate-size.min.js"></script>
+<script src="~/js/filepond-plugin-image-preview.min.js"></script>
+<link href="~/css/filepond.min.css" rel="stylesheet" />
+<link href="~/css/filepond-plugin-image-preview.min.css" rel="stylesheet" />
+
+<style>
+    .filepond--credits {
+        display: none !important;
+    }
+</style>
+
+<div class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="container mx-auto max-w-4xl h-[950px] p-4">
+        <form class="bg-white shadow-md rounded-lg p-6" id="myForm" method="post">
+            @Html.AntiForgeryToken()
+            <!-- 标题 -->
+            <div class="border-b pb-4 mb-6">
+                <h2 class="text-xl font-semibold text-gray-800">新增选手</h2>
+            </div>
+            <!-- 表单项 -->
+            <div class="space-y-6">
+                <!-- 选手姓名 -->
+                <div class="flex items-center">
+                    <label class="w-40 text-right pr-4 text-gray-700 font-medium">选手姓名</label>
+                    <div class="flex-1">
+                        <input type="text" asp-for="Player.PlayerName"
+                            class="w-full p-2 border border-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            required placeholder="请填写选手姓名">
+                    </div>
+                </div>
+
+                <!-- 选手昵称 -->
+                <div class="flex items-center">
+                    <label class="w-40 text-right pr-4 text-gray-700 font-medium">选手昵称</label>
+                    <div class="flex-1">
+                        <input type="text" asp-for="Player.PlayerNickName"
+                            class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            required placeholder="请填写选手昵称">
+                    </div>
+                </div>
+
+                <!-- 选手封面 -->
+                <div class="flex items-start">
+                    <label class="w-40 text-right pr-4 text-gray-700 font-medium pt-2">选手封面</label>
+                    <div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <!-- FilePond 上传组件 -->
+                        <input type="file" asp-for="@Model.Player.PlayerCover" class="filepond cursor-pointer"
+                            accept="image/*" />
+                    </div>
+                </div>
+
+                <!-- 选手战队 -->
+                <div class="flex items-center">
+                    <label class="w-40 text-right pr-4 text-gray-700 font-medium">选手战队</label>
+                    <div class="flex-1">
+                        <input type="text" asp-for="Player.PlayerTeam"
+                            class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            required placeholder="请填写选手战队">
+                    </div>
+                </div>
+
+                <!-- 战队Logo -->
+                <div class="flex items-start">
+                    <label class="w-40 text-right pr-4 text-gray-700 font-medium pt-2">战队Logo</label>
+                    <div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <!-- FilePond 上传组件 -->
+                        <input type="file" asp-for="@Model.Player.PlayerTeamLogo" class="filepond cursor-pointer"
+                            accept="image/*" />
+                    </div>
+                </div>
+
+                <!-- TOP排行 -->
+                <div class="flex items-center">
+                    <label class="w-40 text-right pr-4 text-gray-700 font-medium">@(DateTime.Now.Year - 1)年TOP排行</label>
+                    <div class="flex-1">
+                        <input type="text" asp-for="Player.PlayerTopRanking"
+                            class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+                </div>
+
+                <!-- 选手生日 -->
+                <div class="flex items-center">
+                    <label class="w-40 text-right pr-4 text-gray-700 font-medium">选手生日</label>
+                    <div class="flex-1">
+                        <input type="text" asp-for="Player.PlayerBirthday"
+                            class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            required>
+                    </div>
+                </div>
+
+                <!-- 选手城市 -->
+                <div class="flex items-center">
+                    <label class="w-40 text-right pr-4 text-gray-700 font-medium">选手城市</label>
+                    <div class="flex-1">
+                        <input type="text" asp-for="Player.PlayerCountry"
+                            class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+                </div>
+
+                <!-- 选手奖金 -->
+                <div class="flex items-center">
+                    <label class="w-40 text-right pr-4 text-gray-700 font-medium">选手奖金$</label>
+                    <div class="flex-1">
+                        <input type="text" asp-for="Player.PlayerPrizeMoney"
+                            class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+                </div>
+
+                <!-- 按钮 -->
+                <div class="flex justify-center gap-4 mt-8">
+                    <button type="button" id="btnAddPlayer"
+                        class="cursor-pointer bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors">
+                        保存
+                    </button>
+                    <button type="button" onclick="window.history.back();"
+                        class="cursor-pointer bg-gray-100 text-gray-700 px-6 py-2 rounded-md hover:bg-gray-200 transition-colors">
+                        返回
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    // 获取CSRF令牌
+    const csrfToken = document.querySelector('input[name="__RequestVerificationToken"]').value;
+    let activeUploads = 0;
+
+    // 注册 FilePond 插件
+    FilePond.registerPlugin(
+        FilePondPluginFileValidateSize,
+        FilePondPluginImagePreview,
+    );
+    // 保存按钮
+    const saveButton = document.getElementById('btnAddPlayer');
+
+    // 禁用/启用保存按钮
+    function updateSaveButtonState() {
+        console.log("当前活跃上传数量:", activeUploads); // 添加日志
+        if (activeUploads > 0) {
+            saveButton.disabled = true;
+            saveButton.classList.add('opacity-50', 'cursor-not-allowed');
+            saveButton.classList.remove('hover:bg-blue-600');
+        } else {
+            saveButton.disabled = false;
+            saveButton.classList.remove('opacity-50', 'cursor-not-allowed');
+            saveButton.classList.add('hover:bg-blue-600');
+        }
+    }
+    // 上传选手封面
+    const playerCoverPond = FilePond.create(document.querySelector('#Player_PlayerCover'), {
+        labelIdle: '拖拽封面到这里或 <span class="filepond--label-action">点击浏览</span>',
+        imagePreviewHeight: 120,
+        acceptedFileTypes: ['image/png', 'image/jpeg', 'image/jpg'],
+        maxFileSize: '20MB',
+        server: {
+            process: async (fieldName, file, metadata, load, error, progress, abort) => {
+                // metadata：额外信息 load：上传成功 progress：文件的上传进度 abort：中止文件上传
+                try {
+                    // 创建表单数据
+                    const formData = new FormData();
+                    formData.append('file', file);
+                    formData.append('imageType', 'FigureCover');
+
+                    // 显示上传进度
+                    const xhr = new XMLHttpRequest();
+                    xhr.upload.onprogress = (e) => {
+                        if (e.lengthComputable) {
+                            progress(e.loaded / e.total * 100);
+                        }
+                    };
+
+                    // 使用fetch上传文件
+                    const response = await fetch('?handler=UploadImageOnly', {
+                        method: 'POST',
+                        headers: {
+                            'RequestVerificationToken': csrfToken
+                        },
+                        body: formData
+                    });
+                    // 上传失败
+                    if (!response.ok) {
+                        showMsg('error', '封面上传失败');
+                    }
+                    const result = await response.json();
+                    if (result.success) {
+                        // 手动减少活跃上传计数，确保即使事件不触发也能减少计数
+                        activeUploads--;
+                        updateSaveButtonState();
+                        load(result.filePath);
+                        document.querySelector('#Player_PlayerCover').value = result.filePath;
+                        showMsg('success', '封面上传成功');
+                        return result.filePath;
+                    }
+                } catch (err) {
+                    console.error('上传出错:', err);
+                    // 出错时也减少活跃上传计数
+                    activeUploads--;
+                    updateSaveButtonState();
+                    error(err.message);
+                    return;
+                }
+            }, revert: (uniqueFileId, load, error) => {
+                // uniqueFileId 是 process 返回的标识符（例如文件名）
+                fetch('?handler=Revert', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'RequestVerificationToken': csrfToken
+                    },
+                    body: JSON.stringify(uniqueFileId) // 发送文件名或标识符
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            console.log('文件已自动删除:', uniqueFileId);
+                            load(); // 通知 FilePond 删除成功
+                        } else {
+                            console.error('文件删除请求失败');
+                            error('删除失败');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log('服务器响应:', data);
+                    })
+                    .catch(err => {
+                        console.error('删除文件错误:', err);
+                        error('删除错误');
+                    });
+            }
+
+        }
+    });
+
+    // 上传战队LoGo
+    const playerTeamLogoPond = FilePond.create(document.querySelector('#Player_PlayerTeamLogo'), {
+        labelIdle: '拖拽Logo到这里或 <span class="filepond--label-action">点击浏览</span>',
+        imagePreviewHeight: 120,
+        acceptedFileTypes: ['image/png', 'image/jpeg', 'image/jpg'],
+        maxFileSize: '20MB',
+        server: {
+            process: async (fieldName, file, metadata, load, error, progress, abort) => {
+                try {
+                    // 创建表单数据
+                    const formData = new FormData();
+                    formData.append('file', file);
+                    // 指定图片类型为TeamLogo
+                    formData.append('imageType', 'TeamLogo');
+
+                    // 显示上传进度
+                    const xhr = new XMLHttpRequest();
+                    xhr.upload.onprogress = (e) => {
+                        if (e.lengthComputable) {
+                            progress(e.loaded / e.total * 100);
+                        }
+                    };
+
+                    // 使用fetch上传文件
+                    const response = await fetch('?handler=UploadImageOnly', {
+                        method: 'POST',
+                        headers: {
+                            'RequestVerificationToken': csrfToken
+                        },
+                        body: formData
+                    });
+
+                    if (!response.ok) {
+                        showMsg('error', 'LoGo上传失败');
+                    }
+
+                    const result = await response.json();
+                    if (result.success) {
+                        // 手动减少活跃上传计数，确保即使事件不触发也能减少计数
+                        activeUploads--;
+                        // 更新保存按钮状态
+                        updateSaveButtonState();
+                        load(result.filePath);
+                        document.querySelector('#Player_PlayerTeamLogo').value = result.filePath;
+                        showMsg('success', 'LoGo上传成功')
+                        return result.filePath;
+                    } else {
+                        throw new Error(result.message || '上传失败');
+                    }
+                } catch (err) {
+                    console.error('上传出错:', err);
+                    // 出错时也减少活跃上传计数
+                    activeUploads--;
+                    updateSaveButtonState();
+                    error(err.message);
+                    return;
+                }
+            }, revert: (uniqueFileId, load, error) => {
+                // uniqueFileId 是 process 返回的标识符（例如文件名）
+                fetch('?handler=Revert', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'RequestVerificationToken': csrfToken
+                    },
+                    body: JSON.stringify(uniqueFileId) // 发送文件名或标识符
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            console.log('文件已自动删除:', uniqueFileId);
+                            load(); // 通知 FilePond 删除成功
+                        } else {
+                            console.error('文件删除请求失败');
+                            error('删除失败');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log('服务器响应:', data);
+                    })
+                    .catch(err => {
+                        console.error('删除文件错误:', err);
+                        error('删除错误');
+                    });
+            }
+        }
+    });
+
+
+    // FilePond 事件监听 - 仅保留 addfile 事件
+    playerCoverPond.on('addfile', (error, file) => {
+        if (!error) {
+            console.log('封面文件添加', file.id);
+            activeUploads++;
+            updateSaveButtonState();
+        }
+    });
+
+    playerTeamLogoPond.on('addfile', (error, file) => {
+        if (!error) {
+            console.log('Logo文件添加', file.id);
+            activeUploads++;
+            updateSaveButtonState();
+        }
+    });
+
+    //#btnAddPlayer 保存Player
+    document.querySelector('#btnAddPlayer').addEventListener('click', async function () {
+        // 如果图片正在上传，不允许保存
+        if (activeUploads > 0) {
+            showTooltip('请等待所有图片上传完成', 'warning');
+            return;
+        }
+        // 创建一个Player
+        var player = {
+            PlayerName: document.querySelector('#Player_PlayerName').value,
+            PlayerNickName: document.querySelector('#Player_PlayerNickName').value,
+            PlayerTeam: document.querySelector('#Player_PlayerTeam').value,
+            playerTeamLogo: document.querySelector('#Player_PlayerTeamLogo').value,
+            PlayerCover: document.querySelector('#Player_PlayerCover').value,
+            PlayerTopRanking: parseInt(document.querySelector('#Player_PlayerTopRanking').value),
+            PlayerBirthday: document.querySelector('#Player_PlayerBirthday').value,
+            PlayerCountry: document.querySelector('#Player_PlayerCountry').value,
+            PlayerPrizeMoney: parseFloat(document.querySelector('#Player_PlayerPrizeMoney').value),
+        };
+        const response = await fetch('?handler=AddPlayer', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'RequestVerificationToken': csrfToken
+            },
+            body: JSON.stringify(player)
+        });
+        const data = await response.json();
+        if (!response.ok) {
+            showMsg('error', data.message);
+        }
+        if (response.ok) {
+            showMsg('success', data.message);
+            window.location.href = 'PlayerFile/PlayerDetails?playerId=' + data.playerId;
+        }
+    }, false);
+
+
+    // 手动添加一个重置计数器的函数，以备不时之需
+    window.resetUploadsCounter = function () {
+        activeUploads = 0;
+        updateSaveButtonState();
+        console.log("已重置上传计数器");
+    };
+
+    // 初始化时确保计数器为0
+    activeUploads = 0;
+    updateSaveButtonState();
+    // 消息提示
+    function showMsg(type, title) {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "top",
+            showConfirmButton: false,
+            timer: 1500,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer;
+                toast.onmouseleave = Swal.resumeTimer;
+            }
+        });
+        Toast.fire({
+            icon: type,
+            title: title
+        });
+    }
+</script>

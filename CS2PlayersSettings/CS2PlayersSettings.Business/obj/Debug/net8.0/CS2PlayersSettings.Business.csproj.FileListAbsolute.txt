@@ -1,0 +1,15 @@
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Business\bin\Debug\net8.0\CS2PlayersSettings.Business.deps.json
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Business\bin\Debug\net8.0\CS2PlayersSettings.Business.dll
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Business\bin\Debug\net8.0\CS2PlayersSettings.Business.pdb
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Business\bin\Debug\net8.0\CS2PlayersSettings.Data.dll
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Business\bin\Debug\net8.0\CS2PlayersSettings.Data.pdb
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Business\obj\Debug\net8.0\CS2PlayersSettings.Business.csproj.AssemblyReference.cache
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Business\obj\Debug\net8.0\CS2PlayersSettings.Business.GeneratedMSBuildEditorConfig.editorconfig
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Business\obj\Debug\net8.0\CS2PlayersSettings.Business.AssemblyInfoInputs.cache
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Business\obj\Debug\net8.0\CS2PlayersSettings.Business.AssemblyInfo.cs
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Business\obj\Debug\net8.0\CS2PlayersSettings.Business.csproj.CoreCompileInputs.cache
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Business\obj\Debug\net8.0\CS2Playe.B1A92FF8.Up2Date
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Business\obj\Debug\net8.0\CS2PlayersSettings.Business.dll
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Business\obj\Debug\net8.0\refint\CS2PlayersSettings.Business.dll
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Business\obj\Debug\net8.0\CS2PlayersSettings.Business.pdb
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Business\obj\Debug\net8.0\ref\CS2PlayersSettings.Business.dll

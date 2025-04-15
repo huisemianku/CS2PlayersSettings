@@ -1,0 +1,493 @@
+﻿@page
+@model CS2PlayersSettings.Pages.Demo.AnalysisDemoFileModel
+@{
+}
+
+<script src="~/js/filepond.js"></script>
+<script src="~/js/filepond-plugin-file-validate-size.min.js"></script>
+<link href="~/css/filepond.min.css" rel="stylesheet" />
+<style>
+    /* 隐藏 FilePond 的默认标签和按钮 */
+    .filepond--root .filepond--drop-label {
+        background: transparent;
+        border: none;
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        display: flex;
+        /* 确保覆盖整个区域 */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .filepond--drop-label label {
+        cursor: pointer;
+    }
+
+    .filepond--credits {
+        display: none !important;
+    }
+
+    #matchScore .firstTeam,
+    .secondTeam span {
+        font-size: 38px;
+        font-weight: bold;
+        font-family: Play, sans-serif
+    }
+</style>
+
+<div class="w-300 h-75 mx-auto border-2 border-dashed border-white rounded-md">
+    <form id="uploadForm" method="post" class="w-full h-full" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+        <div id="filepond" class="w-full h-full cursor-pointer">
+            <input type="file" class="filepond w-full h-full" name="UploadedFile" accept=".dem" />
+        </div>
+    </form>
+</div>
+@* 准星 *@
+<div class="w-300 mx-auto bg-gray-300 p-8 hidden" id="playerGameCrosshair">
+    <div class="w-full h-full">
+        <!-- 标题行 -->
+        <div class="flex justify-between mb-4 text-gray-400 text-sm">
+            <div class="flex items-center">
+                <span>SteamID</span>
+                <span class="ml-2 text-xs text-gray-500">Click to open profile</span>
+            </div>
+            <div class="flex items-center">
+                <span>Code</span>
+                <span class="ml-2 text-xs text-gray-500">Click icon to copy</span>
+            </div>
+        </div>
+        <!-- 列表内容 -->
+        <div class="space-y-2" id="playerCrosshairCode">
+        </div>
+    </div>
+</div>
+
+@* 赛后数据 *@
+<div class="bg-gray-800 w-300 hidden mx-auto rounded-lg py-4 px-6 flex items-center justify-center gap-8"
+    id="matchScore">
+    <!-- Team 1  -->
+    <div class="flex items-center gap-2 firstTeam">
+        <h6 class="text-white text-sm font-medium"></h6>
+        <div class="rounded-full w-8 h-8 bg-gray-600 flex items-center justify-center">
+            <i class="fas fa-thumbs-down text-gray-400"></i>
+        </div>
+        <span></span>
+    </div>
+    <!-- Middle Section (Finished, Best of 1) -->
+    <div class="flex flex-col items-center mx-5 matchInfo">
+        <span class="text-white text-sm">5v5 • <span class="mathState">EU</span></span>
+        <span class="w-21 h-10">
+            <img src="" class="mapImg rounded-md">
+        </span>
+        <span class="text-gray-400 p-1 text-sm font-bold mapName"></span>
+    </div>
+    <!-- Team 2  -->
+    <div class="flex items-center gap-2 secondTeam">
+        <span></span>
+        <div class="rounded-full w-8 h-8 bg-gray-600 flex items-center justify-center">
+            <i class="fas fa-trophy text-yellow-500"></i>
+        </div>
+        <h6 class="text-white text-sm font-medium"></h6>
+    </div>
+</div>
+
+<div class="w-300 mx-auto mt-5 rounded-md bg-white">
+    <table class="w-full text-sm text-left text-gray-700">
+        <!-- 表头 -->
+        <thead class="text-xs uppercase bg-gray-50 text-gray-700">
+            <tr>
+                <th scope="col" class="px-6 py-3">Ping</th>
+                <th scope="col" class="px-6 py-3">昵称</th>
+                <th scope="col" class="px-6 py-3">击杀</th>
+                <th scope="col" class="px-6 py-3">死亡</th>
+                <th scope="col" class="px-6 py-3">助攻</th>
+                <th scope="col" class="px-6 py-3">爆头率</th>
+                <th scope="col" class="px-6 py-3">总伤害</th>
+                <th scope="col" class="px-6 py-3">三杀</th>
+                <th scope="col" class="px-6 py-3">四杀</th>
+                <th scope="col" class="px-6 py-3">五杀</th>
+            </tr>
+        </thead>
+        <!-- 表格主体 -->
+        <tbody id="demoDataResult">
+        </tbody>
+    </table>
+</div>
+
+@* 比赛日志 *@
+<div
+    class="w-[594px]! h-[569px] mx-auto text-gray-100 rounded-sm bg-[url('../../Image/CS2Map/de_mirage.webp')] shadow-md p-4 overflow-y-auto  overflow-hidden">
+    <h2 class="text-lg font-semibold mb-2">Game log</h2>
+    <div class="space-y-1 gameDemoLog">
+        @* <div class="log-title text-center text-[#969696] w-30 p-1 border-2 border-white rounded-md">Round Start</div> *@
+        <div class="log-kills"></div>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // 获取CSRF令牌
+        const csrfToken = document.querySelector('input[name="__RequestVerificationToken"]').value;
+
+        // 初始化 FilePond
+        FilePond.registerPlugin(FilePondPluginFileValidateSize);
+        const pond = FilePond.create(document.querySelector('input[type="file"]'), {
+            allowMultiple: false,
+            maxFiles: 1,
+            acceptedFileTypes: ['.dem'],
+            maxFileSize: '1000MB',
+            labelIdle: '拖拽 .dem 文件到这里或点击选择文件',
+            labelFileProcessing: '解析中...',
+            labelFileProcessingComplete: '解析完成',
+            labelFileProcessingAborted: '上传已取消',
+            labelFileProcessingError: '上传出错',
+            labelTapToCancel: '点击取消',
+            labelTapToRetry: '点击重试',
+            labelTapToUndo: '点击撤销',
+            server: {
+                process: {
+                    url: '?handler=UploadDemoFile',
+                    method: 'POST',
+                    withCredentials: false,
+                    headers: {
+                        'RequestVerificationToken': csrfToken
+                    },
+                    ondata: (formData) => {
+                        console.log('准备上传文件...');
+                        return formData;
+                    },
+                    onload: (response) => {
+                        try {
+                            const result = JSON.parse(response);
+                            if (result.success) {
+                                console.log('文件上传成功:', result);
+                                demoDataResultList(result.demoDataResult);
+                                demoCrosshirCodeList(result.demoCrosshair);
+
+                                mathResult(result.gameMatch);
+                                gameDemoLogging(result.gameLog);
+                                // 返回文件路径，这将作为 revert 请求的参数
+                                return result.filePath;
+                            } else {
+                                alert(result.message || '上传失败');
+                                return null;
+                            }
+                        } catch (e) {
+                            console.error('解析响应失败:', e);
+                            alert('上传过程出现错误');
+                            return null;
+                        }
+                    },
+                    onerror: (response) => {
+                        console.error('上传错误:', response);
+                        alert('上传失败，请检查文件格式或重试');
+                    },
+                    revert: (uniqueFileId, load, error) => {
+                        // uniqueFileId 是 process 返回的标识符（例如文件名）
+                        fetch('?handler=Revert', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'RequestVerificationToken': csrfToken
+                            },
+                            body: JSON.stringify(uniqueFileId) // 发送文件名或标识符
+                        })
+                            .then(response => {
+                                if (response.ok) {
+                                    console.log('文件已自动删除:', uniqueFileId);
+                                    load(); // 通知 FilePond 删除成功
+                                } else {
+                                    console.error('文件删除请求失败');
+                                    error('删除失败');
+                                }
+                                return response.json();
+                            })
+                            .then(data => {
+                                console.log('服务器响应:', data);
+                            })
+                            .catch(err => {
+                                console.error('删除文件错误:', err);
+                                error('删除错误');
+                            });
+                    }
+                }
+            }
+        });
+
+        // 监听上传完成事件，清理界面
+        pond.on('processfile', (error, file) => {
+            if (!error) {
+                console.log(`文件 ${file.filename} 上传完成`);
+                // 延迟 3 秒后清除文件
+                setTimeout(() => {
+                    pond.removeFile(file.id); // 清除文件
+                }, 3000);
+            } else {
+                console.error('文件处理失败:', error);
+            }
+        });
+
+        function demoDataResultList(response) {
+            const tbody = document.getElementById("demoDataResult");
+            tbody.innerHTML = ""; // 清空现有内容
+            response.forEach((demoDataResult) => {
+                const tr = document.createElement("tr");
+                tr.innerHTML = `
+                <td class='px-6 py-4'>${demoDataResult.playerPing}</td>
+                <td class='px-6 py-4'>${demoDataResult.playerName}</td>
+                <td class='px-6 py-4'>${demoDataResult.playerKills}</td>
+                <td class='px-6 py-4'>${demoDataResult.playerDeaths}</td>
+                <td class='px-6 py-4'>${demoDataResult.playerAssists}</td>
+                <td class='px-6 py-4'>${demoDataResult.playerHs}</td>
+                <td class='px-6 py-4'>${demoDataResult.playerDamage}</td>
+                <td class='px-6 py-4'>${demoDataResult.playerTripleKills}</td>
+                <td class='px-6 py-4'>${demoDataResult.playerQuadroKills}</td>
+                <td class='px-6 py-4'>${demoDataResult.playerPentaKills}</td>
+                    `;
+                tbody.appendChild(tr);
+                tr.className = 'border-b border-b-gray-300 hover:bg-gray-50 transition-colors';
+            });
+        }
+
+        function demoCrosshirCodeList(data) {
+            const container = document.getElementById('playerCrosshairCode');
+            container.innerHTML = '';
+            const playerGameCrosshair = document.getElementById('playerGameCrosshair');
+            const steamAPI = 'https://steamcommunity.com/profiles/';
+            playerGameCrosshair.className = 'w-300 mx-auto p-8 block';
+            data.forEach(player => {
+                const div = document.createElement('div');
+                div.className = 'relative flex justify-between items-center bg-gray-800 hover:bg-gray-700 p-3 rounded-lg cursor-pointer transition-colors duration-200 group';
+
+                const nameLink = document.createElement('a');
+                nameLink.className = 'text-gray-300 hover:text-blue-500 font-medium truncate';
+                nameLink.href = `${steamAPI}${player.demoPlayerSteamId}`;
+                nameLink.textContent = `${player.demoPlayerSteamId}: ${player.demoPlayerName}`;
+                nameLink.target = '_blank'; // 可选：在新标签页打开链接
+                nameLink.rel = 'noopener noreferrer'; // 可选：安全属性
+
+                const codeContainer = document.createElement('div');
+                codeContainer.className = 'flex items-center space-x-2';
+
+                const codeEl = document.createElement('code');
+                codeEl.className = 'text-gray-300 font-mono hover:text-blue-400 truncate';
+                codeEl.textContent = player.demoPlayerCrosshairCode;
+
+                const buttonContainer = document.createElement('div');
+                buttonContainer.className = 'relative';
+
+                const copyBtn = document.createElement('button');
+                copyBtn.className = 'text-gray-400 p-1';
+                copyBtn.title = '复制准星代码';
+                copyBtn.innerHTML = '<svg class="w-5 h-5 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>';
+                copyBtn.onclick = () => copyCode(player.demoPlayerCrosshairCode, copyBtn);
+
+                const tooltip = document.createElement('div');
+                tooltip.id = 'copyTooltip';
+                tooltip.className = 'absolute hidden -top-10 left-1/2 -translate-x-1/2 items-center px-3 py-1.5 bg-gray-900 text-white text-sm font-medium rounded-md shadow-lg transition-opacity duration-200 opacity-0';
+                tooltip.innerHTML = '<span>Copied!</span>';
+
+                buttonContainer.appendChild(copyBtn);
+                buttonContainer.appendChild(tooltip);
+                codeContainer.appendChild(codeEl);
+                codeContainer.appendChild(buttonContainer);
+                div.appendChild(nameLink);
+                div.appendChild(codeContainer);
+                container.appendChild(div);
+            });
+        }
+
+        // 准星代码复制功能
+        function copyCode(code, button) {
+            navigator.clipboard.writeText(code)
+                .then(() => {
+                    const tooltip = button.nextElementSibling;
+                    tooltip.classList.remove('hidden');
+                    tooltip.classList.remove('opacity-0');
+
+                    setTimeout(() => {
+                        tooltip.classList.add('opacity-0');
+                        setTimeout(() => {
+                            tooltip.classList.add('hidden');
+                        }, 200);
+                    }, 2000);
+                })
+                .catch(err => console.error('复制失败:', err));
+        }
+
+        function mathResult(data) {
+            const matchScore = document.querySelector("#matchScore");
+            matchScore.classList.remove('hidden');
+            matchScore.classList.add('block');
+            if (matchScore) {
+                const firstTeamName = matchScore.querySelector('.firstTeam h6');
+                const firstTeamScore = matchScore.querySelector('.firstTeam span');
+                const secondTeamName = matchScore.querySelector('.secondTeam h6');
+                const secondTeamScore = matchScore.querySelector('.secondTeam span');
+                const mapName = matchScore.querySelector('.matchInfo .mapName');
+                const mapImg = matchScore.querySelector('.matchInfo .mapImg');
+                if (firstTeamName) firstTeamName.textContent = data.counterTerroristName;
+                if (firstTeamScore) firstTeamScore.textContent = data.counterTerroristScore;
+                if (secondTeamName) secondTeamName.textContent = data.terroristName;
+                if (secondTeamScore) secondTeamScore.textContent = data.terroristScore;
+                data.mapName = data.mapName.split('_')[1];
+                if (mapName) mapName.textContent = data.mapName;
+
+                mapImg.src = '../../Image/CS2Map/' + data.mapName + '.png';
+
+                if (parseInt(firstTeamScore.textContent) == parseInt(secondTeamScore.textContent)) {
+                    firstTeamScore.classList.add('text-green-500');
+                    secondTeamScore.classList.add('text-green-500');
+                } else if (parseInt(firstTeamScore.textContent) > parseInt(secondTeamScore.textContent)) {
+                    firstTeamScore.classList.add('text-green-500');
+                    secondTeamScore.classList.add('text-gray-300');
+                } else {
+                    firstTeamScore.classList.add('text-gray-300');
+                    secondTeamScore.classList.add('text-green-500');
+                }
+            } else {
+                console.log("不存在！");
+            }
+        }
+
+        function gameDemoLogging(data) {
+            const gameLog = document.querySelector('.gameDemoLog');
+            const logKills = gameLog.querySelector('.log-kills');
+            if (gameLog) {
+                console.log(data);
+                data.forEach(log => {
+                    const div = document.createElement('div');
+                    const roundStart = document.createElement('span');
+                    const roundEnd = document.createElement('span');
+                    const score = document.createElement('span');
+                    roundStart.textContent = `${log.roundStart}`;
+                    roundStart.className = 'text-center text-[#969696] w-30 p-1 border-2 border-white rounded-md';
+                    div.appendChild(roundStart);
+                    log.kills.forEach(playerKills => {
+                        const roundInfo = document.createElement('div');
+                        const attackerWeapon = document.createElement('img');
+                        const attackerName = document.createElement('span');
+                        const assisterName = document.createElement('span');
+                        const weaponImg = document.createElement('img');
+                        const assistedflashImg = document.createElement('img');
+                        const headshotImg = document.createElement('img');
+                        const smokeImg = document.createElement('img');
+                        const victimName = document.createElement('span');
+                        roundInfo.className = 'border-2 border-[#af1813] bg-[#404040] my-1 px-2 w-fit rounded-md';
+                        weaponImg.classList = 'inline-block';
+                        assistedflashImg.classList = 'inline-block';
+                        attackerWeapon.classList = 'inline-block';
+                        smokeImg.classList = 'inline-block'
+                        //roundInfo.style.width = roundInfo.scrollWidth + 'px';
+                        // CounterTerrorist
+                        if (playerKills.attackerTeam == 3 || playerKills.attackerTeam == null
+                        ) {
+                            if (playerKills.assistedflash) {
+                                assistedflashImg.src = '../../Image/CS2Weapon/flashbang.webp';
+                            }
+                            if (playerKills.headshot) {
+                                headshotImg.src = '../../Image/CS2Weapon/headshot.webp';
+                            }
+                            if (playerKills.thrusmoke) {
+                                smokeImg.src = '../../Image/CS2Weapon/through_smoke.webp';
+                                smokeImg.classList = 'w-[50px] inline-block px-1';
+                            }
+                            attackerName.textContent = `${playerKills.attackerName}`;
+                            if (playerKills.assisterName != null) {
+                                assisterName.textContent = `  + ${playerKills.assisterName}`;
+                            }
+                            if (playerKills.weapon == 'planted_c4') {
+                                victimName.textContent = `${playerKills.victimName}`;
+                            }
+                            weaponImg.src = `../../Image/CS2Weapon/${playerKills.weapon}.webp`;
+                            victimName.textContent = `${playerKills.victimName}`;
+                            attackerName.classList = 'text-[#0091d4] font-bold';
+                            assisterName.classList = 'text-[#0091d4] font-bold';
+                            if (playerKills.victimTeam == 2) {
+                                victimName.classList = 'text-[#fab200] font-bold';
+                            } else {
+                                victimName.classList = 'text-[#0091d4] font-bold';
+                            }
+                        } else if (playerKills.attackerTeam == 2) {
+                            if (playerKills.assistedflash) {
+                                assistedflashImg.src = '../../Image/CS2Weapon/flashbang.webp';
+                            }
+                            if (playerKills.headshot) {
+                                headshotImg.src = '../../Image/CS2Weapon/headshot.webp';
+                            }
+                            if (playerKills.thrusmoke) {
+                                smokeImg.src = '../../Image/CS2Weapon/through_smoke.webp';
+                                smokeImg.classList = 'w-[50px] inline-block px-1';
+                            }
+                            attackerName.textContent = `${playerKills.attackerName}`;
+                            if (playerKills.assisterName != null) {
+                                assisterName.textContent = `  + ${playerKills.assisterName}`;
+                            }
+                            if (playerKills.weapon == 'planted_c4') {
+                                console.log(playerKills.victimName);
+                                victimName.textContent = `${playerKills.victimName}`;
+                            }
+                            weaponImg.src = `../../Image/CS2Weapon/${playerKills.weapon}.webp`;
+                            victimName.textContent = `${playerKills.victimName}`;
+                            attackerName.classList = 'text-[#fab200] font-bold';
+                            assisterName.classList = 'text-[#0091d4] font-bold';
+                            if (playerKills.victimTeam == 3) {
+                                victimName.classList = 'text-[#0091d4] font-bold';
+                            } else {
+                                victimName.classList = 'text-[#fab200] font-bold';
+                            }
+                        }
+                        if (headshotImg.getAttribute('src'))
+                            headshotImg.classList = 'w-[50px] inline-block px-1'
+                        else headshotImg.classList = 'inline-block';
+                        logKills.appendChild(div);
+                        div.className = 'mb-10';
+
+                        div.appendChild(roundInfo);
+                        roundInfo.appendChild(attackerName);
+                        roundInfo.appendChild(assistedflashImg);
+                        roundInfo.appendChild(assisterName);
+                        roundInfo.appendChild(weaponImg);
+                        roundInfo.appendChild(smokeImg);
+                        roundInfo.appendChild(headshotImg);
+                        roundInfo.appendChild(victimName);
+                    });
+                    roundEnd.textContent = `${log.roundEndReason} ${log.counterTerroristTeamName} ${log.counterTerroristScore} 
+                    ${log.terroristTeamName} ${log.terroristScore}`;
+                    roundEnd.className = 'text-center text-[#969696] w-30 p-1 border-2 border-white rounded-md';
+                    div.appendChild(roundEnd);
+                });
+            }
+        }
+
+
+
+        // 监听文件处理完成事件 Test
+        // pond.on('processfile', (error, file) => {
+        //     if (error) {
+        //         console.error('处理文件时出错:', error);
+        //         return;
+        //     }
+        //     console.log('文件处理完成:', file);
+        // });
+
+        // // 监听文件添加事件
+        // pond.on('addfile', (error, file) => {
+        //     if (error) {
+        //         console.error('添加文件时出错:', error);
+        //         return;
+        //     }
+        //     console.log('文件已添加');
+        // });
+
+        // // 监听文件移除事件
+        // pond.on('removefile', (error, file) => {
+        //     if (error) {
+        //         console.error('移除文件时出错:', error);
+        //         return;
+        //     }
+        //     console.log('文件已移除');
+        // });
+    });
+</script>

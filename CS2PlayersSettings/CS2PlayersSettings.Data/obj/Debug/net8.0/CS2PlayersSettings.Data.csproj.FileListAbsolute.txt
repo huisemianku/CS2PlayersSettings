@@ -1,0 +1,14 @@
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Data\bin\Debug\net8.0\CS2PlayersSettings.Data.deps.json
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Data\bin\Debug\net8.0\CS2PlayersSettings.Data.runtimeconfig.json
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Data\bin\Debug\net8.0\CS2PlayersSettings.Data.dll
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Data\bin\Debug\net8.0\CS2PlayersSettings.Data.pdb
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Data\obj\Debug\net8.0\CS2PlayersSettings.Data.csproj.AssemblyReference.cache
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Data\obj\Debug\net8.0\CS2PlayersSettings.Data.GeneratedMSBuildEditorConfig.editorconfig
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Data\obj\Debug\net8.0\CS2PlayersSettings.Data.AssemblyInfoInputs.cache
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Data\obj\Debug\net8.0\CS2PlayersSettings.Data.AssemblyInfo.cs
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Data\obj\Debug\net8.0\CS2PlayersSettings.Data.csproj.CoreCompileInputs.cache
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Data\obj\Debug\net8.0\CS2PlayersSettings.Data.dll
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Data\obj\Debug\net8.0\refint\CS2PlayersSettings.Data.dll
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Data\obj\Debug\net8.0\CS2PlayersSettings.Data.pdb
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Data\obj\Debug\net8.0\CS2PlayersSettings.Data.genruntimeconfig.cache
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Data\obj\Debug\net8.0\ref\CS2PlayersSettings.Data.dll

@@ -1,0 +1,717 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CS2PlayersSettings.bundle.scp.css",
+      "PackagePath": "staticwebassets\\CS2PlayersSettings.lc3t8pkixu.bundle.scp.css"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2.jpg",
+      "PackagePath": "staticwebassets\\Image\\CS2.jpg"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Map\\ancient.png",
+      "PackagePath": "staticwebassets\\Image\\CS2Map\\ancient.png"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Map\\anubis.png",
+      "PackagePath": "staticwebassets\\Image\\CS2Map\\anubis.png"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Map\\de_mirage.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Map\\de_mirage.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Map\\dust2.png",
+      "PackagePath": "staticwebassets\\Image\\CS2Map\\dust2.png"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Map\\inferno.jpeg",
+      "PackagePath": "staticwebassets\\Image\\CS2Map\\inferno.jpeg"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Map\\mirage.png",
+      "PackagePath": "staticwebassets\\Image\\CS2Map\\mirage.png"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Map\\nuke.png",
+      "PackagePath": "staticwebassets\\Image\\CS2Map\\nuke.png"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Map\\train.png",
+      "PackagePath": "staticwebassets\\Image\\CS2Map\\train.png"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\ak47.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\ak47.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\awp.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\awp.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\bombplant.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\bombplant.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\deagle.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\deagle.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\elite.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\elite.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\famas.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\famas.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\fiveseven.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\fiveseven.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\flashbang.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\flashbang.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\galilar.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\galilar.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\glock.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\glock.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\headshot.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\headshot.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\hegrenade.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\hegrenade.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\hkp2000.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\hkp2000.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\inferno.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\inferno.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\knife.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\knife.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\knife_butterfly.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\knife_butterfly.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\knife_karambit.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\knife_karambit.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\knife_t.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\knife_t.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\m4a1.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\m4a1.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\m4a1_silencer.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\m4a1_silencer.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\mac10.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\mac10.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\mag7.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\mag7.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\mp5sd.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\mp5sd.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\mp9.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\mp9.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\p250.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\p250.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\penetration.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\penetration.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\shooter_blind.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\shooter_blind.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\ssg08.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\ssg08.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\through_smoke.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\through_smoke.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\usp_silencer.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\usp_silencer.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\CS2Weapon\\xm1014.webp",
+      "PackagePath": "staticwebassets\\Image\\CS2Weapon\\xm1014.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\Dust2.png",
+      "PackagePath": "staticwebassets\\Image\\Dust2.png"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\Aleksib.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\Aleksib.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\Brollan.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\Brollan.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\EliGE.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\EliGE.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\HeavyGod.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\HeavyGod.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\Jimpphat.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\Jimpphat.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\MAJ3R.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\MAJ3R.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\Magisk.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\Magisk.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\NiKo.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\NiKo.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\Snax.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\Snax.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\Spinx.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\Spinx.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\TeSeS.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\TeSeS.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\Wicadia.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\Wicadia.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\XANTARES.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\XANTARES.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\ZywOo.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\ZywOo.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\apEX.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\apEX.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\b1t.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\b1t.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\broky.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\broky.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\chopper.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\chopper.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\donk.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\donk.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\flameZ.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\flameZ.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\frozen.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\frozen.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\huNter.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\huNter.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\iM.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\iM.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\jL.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\jL.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\jottAAA.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\jottAAA.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\karrigan.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\karrigan.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\m0NESY.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\m0NESY.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\magixx.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\magixx.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\malbsMd.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\malbsMd.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\mezii.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\mezii.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\rain.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\rain.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\ropz.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\ropz.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\s1mple.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\s1mple.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\sh1ro.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\sh1ro.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\torzsi.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\torzsi.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\vlcsnap-2025-04-09-19h15m18s435_20250411215517.png",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\vlcsnap-2025-04-09-19h15m18s435_20250411215517.png"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\w0nderful.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\w0nderful.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\woxic.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\woxic.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\xertioN.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\xertioN.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\FigureCovers\\zont1x.webp",
+      "PackagePath": "staticwebassets\\Image\\FigureCovers\\zont1x.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\Inferno.png",
+      "PackagePath": "staticwebassets\\Image\\Inferno.png"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\NuKe.png",
+      "PackagePath": "staticwebassets\\Image\\NuKe.png"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\TeamLogo\\Astralis.svg",
+      "PackagePath": "staticwebassets\\Image\\TeamLogo\\Astralis.svg"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\TeamLogo\\Eternal Fire.webp",
+      "PackagePath": "staticwebassets\\Image\\TeamLogo\\Eternal Fire.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\TeamLogo\\FaZe.webp",
+      "PackagePath": "staticwebassets\\Image\\TeamLogo\\FaZe.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\TeamLogo\\Falcons.webp",
+      "PackagePath": "staticwebassets\\Image\\TeamLogo\\Falcons.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\TeamLogo\\G2.webp",
+      "PackagePath": "staticwebassets\\Image\\TeamLogo\\G2.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\TeamLogo\\MOUZ.svg",
+      "PackagePath": "staticwebassets\\Image\\TeamLogo\\MOUZ.svg"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\TeamLogo\\Natus Vincere.svg",
+      "PackagePath": "staticwebassets\\Image\\TeamLogo\\Natus Vincere.svg"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\TeamLogo\\Spirit.webp",
+      "PackagePath": "staticwebassets\\Image\\TeamLogo\\Spirit.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\TeamLogo\\The MongolZ.webp",
+      "PackagePath": "staticwebassets\\Image\\TeamLogo\\The MongolZ.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\Image\\TeamLogo\\Vitality.webp",
+      "PackagePath": "staticwebassets\\Image\\TeamLogo\\Vitality.webp"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\css\\filepond-plugin-image-preview.min.css",
+      "PackagePath": "staticwebassets\\css\\filepond-plugin-image-preview.min.css"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\css\\filepond.css",
+      "PackagePath": "staticwebassets\\css\\filepond.css"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\css\\filepond.min.css",
+      "PackagePath": "staticwebassets\\css\\filepond.min.css"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\css\\input.css",
+      "PackagePath": "staticwebassets\\css\\input.css"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\css\\output.css",
+      "PackagePath": "staticwebassets\\css\\output.css"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\css\\sweetalert2.min.css",
+      "PackagePath": "staticwebassets\\css\\sweetalert2.min.css"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\js\\filepond-plugin-file-validate-size.esm.js",
+      "PackagePath": "staticwebassets\\js\\filepond-plugin-file-validate-size.esm.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\js\\filepond-plugin-file-validate-size.esm.min.js",
+      "PackagePath": "staticwebassets\\js\\filepond-plugin-file-validate-size.esm.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\js\\filepond-plugin-file-validate-size.js",
+      "PackagePath": "staticwebassets\\js\\filepond-plugin-file-validate-size.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\js\\filepond-plugin-file-validate-size.min.js",
+      "PackagePath": "staticwebassets\\js\\filepond-plugin-file-validate-size.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\js\\filepond-plugin-image-preview.esm.js",
+      "PackagePath": "staticwebassets\\js\\filepond-plugin-image-preview.esm.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\js\\filepond-plugin-image-preview.esm.min.js",
+      "PackagePath": "staticwebassets\\js\\filepond-plugin-image-preview.esm.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\js\\filepond-plugin-image-preview.js",
+      "PackagePath": "staticwebassets\\js\\filepond-plugin-image-preview.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\js\\filepond-plugin-image-preview.min.js",
+      "PackagePath": "staticwebassets\\js\\filepond-plugin-image-preview.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\js\\filepond.esm.js",
+      "PackagePath": "staticwebassets\\js\\filepond.esm.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\js\\filepond.esm.min.js",
+      "PackagePath": "staticwebassets\\js\\filepond.esm.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\js\\filepond.js",
+      "PackagePath": "staticwebassets\\js\\filepond.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\js\\filepond.min.js",
+      "PackagePath": "staticwebassets\\js\\filepond.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\js\\sweetalert2.min.js",
+      "PackagePath": "staticwebassets\\js\\sweetalert2.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CS2PlayersSettings.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CS2PlayersSettings.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.CS2PlayersSettings.props",
+      "PackagePath": "build\\CS2PlayersSettings.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.CS2PlayersSettings.props",
+      "PackagePath": "buildMultiTargeting\\CS2PlayersSettings.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.CS2PlayersSettings.props",
+      "PackagePath": "buildTransitive\\CS2PlayersSettings.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

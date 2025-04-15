@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\CS2PlayersSettings.props" />
+</Project>

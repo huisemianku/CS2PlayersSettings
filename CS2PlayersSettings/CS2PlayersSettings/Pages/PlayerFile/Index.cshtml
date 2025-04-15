@@ -1,0 +1,338 @@
+﻿@page "/{pageIndex?}"
+@model CS2PlayersSettings.Pages.PlayerFile.IndexModel
+@{
+}
+<div class="relative flex items-center">
+  <form method="get" id="searchForm" class="">
+    <div class="bg-gray-50 w-[480px] h-12 rounded-md mb-6 flex items-center px-4">
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-gray-400 mr-2">
+        <path fill-rule="evenodd"
+          d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+          clip-rule="evenodd" />
+      </svg>
+      <input type="text" asp-for="SearchTerm" placeholder="搜索"
+        class="bg-transparent text-gray-500 placeholder-gray-400 focus:outline-none w-full" autocomplete="off" />
+    </div>
+    <div id="loadingSpinner"
+      class="absolute top-0 left-0 w-[480px] h-full flex items-center justify-center bg-white bg-opacity-75 rounded hidden">
+      <div class="inline-flex items-center bg-blue-200 text-blue-700 rounded-md py-2 px-4">
+        <div class="animate-spin rounded-full h-5 w-5 mr-2 border-t-2 border-b-2 border-blue-700"></div>
+        <span>Processing...</span>
+      </div>
+    </div>
+    <div id="searchResults" class="bg-white w-120 absolute left-0 top-15 hidden shadow rounded-md h-[300px] z-20 ">
+      <div class="px-2 py-2 border-b border-gray-200">
+        <span class="text-lg font-medium text-gray-500">Players</span>
+      </div>
+      <div class="overflow-y-auto h-[calc(5*48px)]">
+        <ul id="resultList">
+        </ul>
+      </div>
+    </div>
+  </form>
+  <div class="bg-gray-50 h-12 w-25 mb-6 ml-6 justify-center flex align-center rounded-md border-md">
+    <button class="w-full h-full cursor-pointer text-gray-500" onclick="ExportPlayer()">导出</button>
+  </div>
+</div>
+<div class="overflow-x-auto bg-white shadow-md rounded-lg">
+  <table class="w-full text-sm text-left text-gray-700">
+    <!-- 表头 -->
+    <thead class="text-xs uppercase bg-gray-50 text-gray-700">
+      <tr>
+        <th scope="col" class="px-6 py-3">ID</th>
+        <th scope="col" class="px-6 py-3">昵称</th>
+        <th scope="col" class="px-6 py-3">封面</th>
+        <th scope="col" class="px-6 py-3">战队</th>
+        <th scope="col" class="px-6 py-3">队标</th>
+        <th scope="col" class="px-6 py-3">操作</th>
+      </tr>
+    </thead>
+    <!-- 表格主体 -->
+    <tbody>
+      @foreach (var player in Model.Players)
+      {
+        <tr class="border-b border-b-gray-300 hover:bg-gray-50 transition-colors">
+          <td class="px-6 py-4 font-medium">@player.PlayerId</td>
+          <td class="px-6 py-4">@player.PlayerNickName</td>
+          <td class="px-6 py-4">
+            <img src="@player.PlayerCover" class="w-10 h-10" />
+          </td>
+          <td class="px-6 py-4">@player.PlayerTeam</td>
+          <td class="px-6 py-4">
+            <img src=" @player.PlayerTeamLogo" class="w-10 h-10" />
+          </td>
+          <td class="px-6 py-4">
+            <a asp-page="PlayerDetails" asp-route-playerId="@player.PlayerId"
+              class="text-blue-600 hover:text-blue-800 mr-2 cursor-pointer">详情</a>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
+<div class="mt-4 flex items-center justify-between" id="pagination-container">
+  <div class="text-sm text-gray-700">
+    显示 @(Model.Players.PageSize * (Model.Players.PageNumber - 1) + 1) 到
+    @(Model.Players.PageSize * (Model.Players.PageNumber - 1) + Model.Players.Count) 条，
+    共 @Model.Players.TotalItemCount 条记录
+  </div>
+  <nav class="flex items-center space-x-2">
+    <a asp-page="Index" asp-route-PageIndex="@(Model.Players.PageNumber - 1)" asp-route-searchTerm="@Model.SearchTerm"
+      class="px-3 py-1 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300 @(Model.Players.HasPreviousPage ? "" : "pointer-events-none opacity-50")">
+      上一页
+    </a>
+    @{
+      int maxPagesToShow = 3; // 定义要显示的最大页数
+      int startPage;
+      int endPage;
+
+      if (Model.Players.PageCount <= maxPagesToShow)
+      {
+        // 显示所有页码
+        startPage = 1;
+        endPage = Model.Players.PageCount;
+      }
+      else
+      {
+        // 计算起始页码和结束页码
+        int middle = (int)Math.Floor(maxPagesToShow / 2.0); // 3
+        startPage = Model.Players.PageNumber - middle;
+        endPage = Model.Players.PageNumber + middle;
+
+        // 调整起始页码和结束页码
+        if (startPage < 1)
+        {
+          endPage += (1 - startPage);
+          startPage = 1;
+        }
+
+        if (endPage > Model.Players.PageCount)
+        {
+          startPage -= (endPage - Model.Players.PageCount);
+          endPage = Model.Players.PageCount;
+        }
+
+        // 确保 startPage 不小于 1
+        startPage = Math.Max(1, startPage);
+      }
+
+      // 添加首页和省略号 (如果需要)
+      if (startPage > 1)
+      {
+        <a asp-page="Index" asp-route-PageIndex="1" asp-route-searchTerm="@Model.SearchTerm"
+          class="px-3 py-1 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300">
+          1
+        </a>
+        if (startPage > 2)
+        {
+          <span>...</span>
+        }
+      }
+      // 显示中间页码
+      for (int i = startPage; i <= endPage; i++)
+      {
+        <a asp-page="Index" asp-route-PageIndex="@i" asp-route-searchTerm="@Model.SearchTerm"
+          class="px-3 py-1 rounded-md @(Model.Players.PageNumber == i ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700 hover:bg-gray-300")">
+          @i
+        </a>
+      }
+      // 添加末页和省略号 (如果需要)
+      if (endPage < Model.Players.PageCount)
+      {
+        if (endPage < Model.Players.PageCount - 1)
+        {
+          <span>...</span>
+        }
+        <a asp-page="Index" asp-route-PageIndex="@Model.Players.PageCount" asp-route-searchTerm="@Model.SearchTerm"
+          class="px-3 py-1 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300">
+          @Model.Players.PageCount
+        </a>
+      }
+    }
+    <a asp-page="Index" asp-route-PageIndex="@(Model.Players.PageNumber + 1)" asp-route-searchTerm="@Model.SearchTerm"
+      class="px-3 py-1 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300 @(Model.Players.HasNextPage ? "" : "pointer-events-none opacity-50")">
+      下一页
+    </a>
+  </nav>
+</div>
+@Html.AntiForgeryToken()
+<script>
+  const searchInput = document.getElementById('SearchTerm');
+  const loadingSpinner = document.getElementById('loadingSpinner');
+  const searchResults = document.getElementById('searchResults');
+  const resultList = document.getElementById('resultList');
+  const csrfToken = document.querySelector('input[name="__RequestVerificationToken"]').value;
+  function showLoadingSpinner() {
+    loadingSpinner.classList.remove('hidden');
+  }
+
+  function hideLoadingSpinner() {
+    loadingSpinner.classList.add('hidden');
+  }
+
+  function clearSearchResults() {
+    resultList.innerHTML = ''; // 只清空 ul
+    searchResults.classList.add('hidden');
+  }
+
+  async function performSearch(searchTerm) {
+    try {
+      const results = await getSearchResults(searchTerm);
+      hideLoadingSpinner(); // 在搜索完成后隐藏加载图标
+      displaySearchResults(results);
+    } catch (error) {
+      console.error('Search failed:', error);
+      hideLoadingSpinner();
+      clearSearchResults();
+    }
+  }
+
+  async function getSearchResults(searchTerm) {
+    const url = `/Index?searchTerm=${encodeURIComponent(searchTerm)}`;
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log('Response data:', data);
+    return data.players || [];
+  }
+
+  function displaySearchResults(results) {
+    clearSearchResults();
+
+    if (!Array.isArray(results)) {
+      console.error('Results is not an array:', results);
+      resultList.innerHTML = '<li class="px-6 py-3 text-gray-500">数据格式错误</li>';
+      searchResults.classList.remove('hidden');
+      searchResults.classList.add('block');
+      return;
+    }
+
+    if (results.length === 0) {
+      resultList.innerHTML = '<li class="px-6 py-3 text-gray-500">暂无搜索结果</li>';
+      searchResults.classList.remove('hidden');
+      searchResults.classList.add('block');
+      return;
+    }
+
+    results.forEach(result => {
+      console.log('Result item:', result);
+      const li = document.createElement('li');
+      li.classList.add('px-6', 'py-3', 'flex', 'items-center', 'hover:bg-gray-50', 'cursor-pointer');
+      li.onclick = () => window.location.href = `/PlayerFile/PlayerDetails?playerId=${result.playerId}`;
+
+      const img = document.createElement('img');
+      img.classList.add('w-8', 'h-8', 'rounded-full', 'mr-3', 'object-cover');
+      img.src = result.playerCover || 'https://randomuser.me/api/portraits/men/44.jpg';
+
+      const span = document.createElement('span');
+      span.classList.add('text-sm', 'text-gray-700');
+      span.textContent = result.playerNickName;
+
+      li.appendChild(img);
+      li.appendChild(span);
+      resultList.appendChild(li);
+    });
+
+    searchResults.classList.remove('hidden');
+    searchResults.classList.add('block');
+  }
+
+  // 防抖函数
+  function debounce(func, wait) {
+    let timeout;
+    return function (...args) {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func(...args), wait);
+    };
+  }
+
+  // 防抖处理搜索，延迟 1 秒 (1000ms)
+  const debouncedSearch = debounce((searchTerm) => {
+    performSearch(searchTerm);
+  }, 1000); // 延迟 1 秒
+
+  // 添加输入事件监听
+  searchInput.addEventListener('input', (e) => {
+    const searchTerm = e.target.value.trim();
+    if (searchTerm.length >= 2) {
+      showLoadingSpinner(); // 输入 >= 2 时立即显示加载图标
+      debouncedSearch(searchTerm); // 延迟 1 秒执行搜索
+    } else {
+      hideLoadingSpinner();
+      clearSearchResults();
+    }
+  });
+  // 导出数据到Excel
+  // 'RequestVerificationToken': csrfToken 起着 防止跨站请求伪造（Cross-Site Request Forgery，CSRF）攻击 的关键作用
+  async function ExportPlayer() {
+    try {
+      const response = await fetch('?handler=ExportPlayer', {
+        method: 'GET',
+        headers: {
+          'RequestVerificationToken': csrfToken
+        }
+      });
+
+      if (!response.ok) {
+        showMsg('error', '导出失败！');
+        return;
+      }
+
+      // 检查响应头是否包含文件（Content-Disposition 表示文件下载）
+      const contentDisposition = response.headers.get('Content-Disposition');
+      if (contentDisposition && contentDisposition.includes('attachment')) {
+        // 处理文件下载
+        const blob = await response.blob();
+        const fileName = contentDisposition.match(/filename="(.+)"/)?.[1] || 'Players.xlsx';
+
+        // 触发文件保存对话框
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        // 显示成功消息
+        showMsg('success', '文件导出成功！');
+      } else {
+        // 如果后端返回 JSON，处理结果
+        const result = await response.json();
+        if (result.success) {
+          showMsg('success', result.message);
+        } else {
+          showMsg('error', result.message);
+        }
+      }
+    } catch (error) {
+      showMsg('error', `导出失败：${error.message}`);
+    }
+  }
+  // 消息提示
+  function showMsg(type, title) {
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "top",
+      showConfirmButton: false,
+      timer: 1500,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.onmouseenter = Swal.stopTimer;
+        toast.onmouseleave = Swal.resumeTimer;
+      }
+    });
+    Toast.fire({
+      icon: type,
+      title: title
+    });
+  }
+</script>
