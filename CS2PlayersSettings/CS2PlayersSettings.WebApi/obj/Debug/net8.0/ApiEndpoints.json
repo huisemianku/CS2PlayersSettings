@@ -1,0 +1,146 @@
+[
+  {
+    "ContainingType": "CS2PlayersSettings.WebApi.Controllers.PlayerController",
+    "Method": "getAllPlayers",
+    "RelativePath": "api/Player/getAllPlayers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CS2PlayersSettings.Data.Repository.Entities.Player, CS2PlayersSettings.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CS2PlayersSettings.WebApi.Controllers.PlayerController",
+    "Method": "GetPlayersById",
+    "RelativePath": "api/Player/GetPlayersById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "playerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CS2PlayersSettings.Data.Repository.Entities.Player",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CS2PlayersSettings.WebApi.Controllers.PlayerController",
+    "Method": "GetPlayersByNickName",
+    "RelativePath": "api/Player/GetPlayersByNickName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nickName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CS2PlayersSettings.Data.Repository.Entities.Player, CS2PlayersSettings.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CS2PlayersSettings.WebApi.Controllers.PlayerController",
+    "Method": "GetPlayerSettingById",
+    "RelativePath": "api/Player/GetPlayerSettingById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "playerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CS2_PlayerSettings.Data.Repository.Model.PlayerSettingsDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CS2PlayersSettings.WebApi.Controllers.PlayerController",
+    "Method": "GetTeamPlayes",
+    "RelativePath": "api/Player/GetTeamPlayes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "teamId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CS2PlayersSettings.Data.Repository.Entities.Player, CS2PlayersSettings.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CS2PlayersSettings.WebApi.Controllers.PlayerController",
+    "Method": "GetTopTenteamList",
+    "RelativePath": "api/Player/GetTopTenteamList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CS2PlayersSettings.Data.Repository.Entities.Team, CS2PlayersSettings.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

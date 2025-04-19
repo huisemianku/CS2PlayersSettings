@@ -12,3 +12,4 @@ E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Data\obj\Debug\net8.0\
 E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Data\obj\Debug\net8.0\CS2PlayersSettings.Data.pdb
 E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Data\obj\Debug\net8.0\CS2PlayersSettings.Data.genruntimeconfig.cache
 E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Data\obj\Debug\net8.0\ref\CS2PlayersSettings.Data.dll
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Data\obj\Debug\net8.0\CS2PlayersSettings.Data.sourcelink.json

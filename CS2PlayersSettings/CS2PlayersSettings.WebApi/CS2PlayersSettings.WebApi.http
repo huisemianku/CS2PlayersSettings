@@ -1,0 +1,6 @@
+@CS2PlayersSettings.WebApi_HostAddress = http://localhost:5235
+
+GET {{CS2PlayersSettings.WebApi_HostAddress}}/Player/
+Accept: application/json
+
+###

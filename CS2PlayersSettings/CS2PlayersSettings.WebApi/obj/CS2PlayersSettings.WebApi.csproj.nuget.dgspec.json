@@ -1,0 +1,267 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.WebApi\\CS2PlayersSettings.WebApi.csproj": {}
+  },
+  "projects": {
+    "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Business\\CS2PlayersSettings.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Business\\CS2PlayersSettings.Business.csproj",
+        "projectName": "CS2PlayersSettings.Business",
+        "projectPath": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Business\\CS2PlayersSettings.Business.csproj",
+        "packagesPath": "C:\\Users\\19609\\.nuget\\packages\\",
+        "outputPath": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Visual Studio Tool\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\19609\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Data\\CS2PlayersSettings.Data.csproj": {
+                "projectPath": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Data\\CS2PlayersSettings.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MaxMind.GeoIP2": {
+              "target": "Package",
+              "version": "[5.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200-preview.0.24575.35/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Data\\CS2PlayersSettings.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Data\\CS2PlayersSettings.Data.csproj",
+        "projectName": "CS2PlayersSettings.Data",
+        "projectPath": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Data\\CS2PlayersSettings.Data.csproj",
+        "packagesPath": "C:\\Users\\19609\\.nuget\\packages\\",
+        "outputPath": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Visual Studio Tool\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\19609\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.104.2, )"
+            },
+            "DemoFile": {
+              "target": "Package",
+              "version": "[0.29.1, )"
+            },
+            "DemoFile.Game.Cs": {
+              "target": "Package",
+              "version": "[0.29.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "X.PagedList": {
+              "target": "Package",
+              "version": "[10.5.7, )"
+            },
+            "X.PagedList.Mvc.Core": {
+              "target": "Package",
+              "version": "[10.5.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200-preview.0.24575.35/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.WebApi\\CS2PlayersSettings.WebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.WebApi\\CS2PlayersSettings.WebApi.csproj",
+        "projectName": "CS2PlayersSettings.WebApi",
+        "projectPath": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.WebApi\\CS2PlayersSettings.WebApi.csproj",
+        "packagesPath": "C:\\Users\\19609\\.nuget\\packages\\",
+        "outputPath": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.WebApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Visual Studio Tool\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\19609\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Business\\CS2PlayersSettings.Business.csproj": {
+                "projectPath": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Business\\CS2PlayersSettings.Business.csproj"
+              },
+              "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Data\\CS2PlayersSettings.Data.csproj": {
+                "projectPath": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Data\\CS2PlayersSettings.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200-preview.0.24575.35/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -13,3 +13,4 @@ E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Business\obj\Debug\net
 E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Business\obj\Debug\net8.0\refint\CS2PlayersSettings.Business.dll
 E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Business\obj\Debug\net8.0\CS2PlayersSettings.Business.pdb
 E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Business\obj\Debug\net8.0\ref\CS2PlayersSettings.Business.dll
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings.Business\obj\Debug\net8.0\CS2PlayersSettings.Business.sourcelink.json

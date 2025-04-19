@@ -1,0 +1,608 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "CS2PlayersSettings.WebApi",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Player/getAllPlayers": {
+      "get": {
+        "tags": [
+          "Player"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Player"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Player"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Player"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Player/GetPlayerSettingById": {
+      "get": {
+        "tags": [
+          "Player"
+        ],
+        "parameters": [
+          {
+            "name": "playerId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlayerSettingsDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlayerSettingsDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlayerSettingsDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Player/GetPlayersByNickName": {
+      "get": {
+        "tags": [
+          "Player"
+        ],
+        "parameters": [
+          {
+            "name": "nickName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Player"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Player"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Player"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Player/GetTeamPlayes": {
+      "get": {
+        "tags": [
+          "Player"
+        ],
+        "parameters": [
+          {
+            "name": "teamId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Player"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Player"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Player"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Player/GetTopTenteamList": {
+      "get": {
+        "tags": [
+          "Player"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Team"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Team"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Team"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Player/GetPlayersById": {
+      "get": {
+        "tags": [
+          "Player"
+        ],
+        "parameters": [
+          {
+            "name": "playerId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Player"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Player"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Player"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CrosshairSetting": {
+        "type": "object",
+        "properties": {
+          "crosshairId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "playerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "crosshairCover": {
+            "type": "string",
+            "nullable": true
+          },
+          "crosshairSize": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "crosshairThickness": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "crosshairGap": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "crosshairStyle": {
+            "type": "string",
+            "nullable": true
+          },
+          "crosshairColorRed": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "crosshairColorGreen": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "crosshairColorBlue": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "crosshairCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "crosshairLastUpdateTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "player": {
+            "$ref": "#/components/schemas/Player"
+          }
+        },
+        "additionalProperties": false
+      },
+      "MouseSetting": {
+        "type": "object",
+        "properties": {
+          "mouseId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "playerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mouseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "mouseDpi": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "mouseSensitivity": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "mouseEdpi": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "mouseZoomSensitivity": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "mouseHz": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "windowsSensitivity": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "mouseLastUpdateTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "player": {
+            "$ref": "#/components/schemas/Player"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Player": {
+        "type": "object",
+        "properties": {
+          "playerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "playerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "playerNickName": {
+            "type": "string",
+            "nullable": true
+          },
+          "playerCover": {
+            "type": "string",
+            "nullable": true
+          },
+          "playerTopRanking": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "playerBirthday": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "playerCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "playerPrizeMoney": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "playerTeam": {
+            "type": "string",
+            "nullable": true
+          },
+          "playerTeamLogo": {
+            "type": "string",
+            "nullable": true
+          },
+          "playerCountryImage": {
+            "type": "string",
+            "nullable": true
+          },
+          "teamId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "crosshairSettings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CrosshairSetting"
+            },
+            "nullable": true
+          },
+          "mouseSettings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MouseSetting"
+            },
+            "nullable": true
+          },
+          "team": {
+            "$ref": "#/components/schemas/Team"
+          },
+          "videoSettings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VideoSetting"
+            },
+            "nullable": true
+          },
+          "viewmodelSettings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ViewmodelSetting"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PlayerSettingsDto": {
+        "type": "object",
+        "properties": {
+          "mouseSettings": {
+            "$ref": "#/components/schemas/MouseSetting"
+          },
+          "crosshairSettings": {
+            "$ref": "#/components/schemas/CrosshairSetting"
+          },
+          "viewmodelSettings": {
+            "$ref": "#/components/schemas/ViewmodelSetting"
+          },
+          "videoSettings": {
+            "$ref": "#/components/schemas/VideoSetting"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Team": {
+        "type": "object",
+        "properties": {
+          "teamId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "teamName": {
+            "type": "string",
+            "nullable": true
+          },
+          "teamRanking": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "teamImg": {
+            "type": "string",
+            "nullable": true
+          },
+          "players": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Player"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VideoSetting": {
+        "type": "object",
+        "properties": {
+          "videoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "playerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "resolution": {
+            "type": "string",
+            "nullable": true
+          },
+          "aspectRatio": {
+            "type": "string",
+            "nullable": true
+          },
+          "scalingMode": {
+            "type": "string",
+            "nullable": true
+          },
+          "displayMode": {
+            "type": "string",
+            "nullable": true
+          },
+          "videoLastUpdateTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "player": {
+            "$ref": "#/components/schemas/Player"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ViewmodelSetting": {
+        "type": "object",
+        "properties": {
+          "viewmodelId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "playerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "viewmodelFov": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "viewmodelOffsetX": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "viewmodelOffsetY": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "viewmodelOffsetZ": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "viewmodelPresetpos": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "viewmodelCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "viewmodelLastUpdateTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "player": {
+            "$ref": "#/components/schemas/Player"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

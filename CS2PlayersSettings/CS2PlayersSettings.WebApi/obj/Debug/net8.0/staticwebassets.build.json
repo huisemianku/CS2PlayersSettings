@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "L7ZHRZwdJRWHAoBx5mH1VLFiTA0x9zlcyNAG4HQ9E4g=",
+  "Source": "CS2PlayersSettings.WebApi",
+  "BasePath": "_content/CS2PlayersSettings.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
