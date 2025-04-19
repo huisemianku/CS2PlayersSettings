@@ -195,3 +195,4 @@ E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings\bin\Debug\net8.0\runti
 E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings\bin\Debug\net8.0\MaxMind.Db.dll
 E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings\bin\Debug\net8.0\MaxMind.GeoIP2.dll
+E:\ASP.NET CORE WEB\CS2PlayersSettings\CS2PlayersSettings\obj\Debug\net8.0\CS2PlayersSettings.sourcelink.json

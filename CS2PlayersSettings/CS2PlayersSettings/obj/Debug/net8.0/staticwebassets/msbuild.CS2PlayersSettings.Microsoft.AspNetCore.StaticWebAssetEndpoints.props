@@ -4,13 +4,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CS2PlayersSettings.lc3t8pkixu.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-y339juEmp\u002BS6qc35jpswNaq3/s2Crj1vBBVKJpt/0cg="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1136"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022y339juEmp\u002BS6qc35jpswNaq3/s2Crj1vBBVKJpt/0cg=\u0022"},{"Name":"Last-Modified","Value":"Sat, 05 Apr 2025 11:42:12 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1136"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022y339juEmp\u002BS6qc35jpswNaq3/s2Crj1vBBVKJpt/0cg=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 09:40:00 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/CS2PlayersSettings/CS2PlayersSettings.lc3t8pkixu.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CS2PlayersSettings.lc3t8pkixu.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"lc3t8pkixu"},{"Name":"integrity","Value":"sha256-y339juEmp\u002BS6qc35jpswNaq3/s2Crj1vBBVKJpt/0cg="},{"Name":"label","Value":"_content/CS2PlayersSettings/CS2PlayersSettings.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1136"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022y339juEmp\u002BS6qc35jpswNaq3/s2Crj1vBBVKJpt/0cg=\u0022"},{"Name":"Last-Modified","Value":"Sat, 05 Apr 2025 11:42:12 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1136"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022y339juEmp\u002BS6qc35jpswNaq3/s2Crj1vBBVKJpt/0cg=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 09:40:00 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/CS2PlayersSettings/css/filepond-plugin-image-preview.min.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\filepond-plugin-image-preview.min.css'))</AssetFile>

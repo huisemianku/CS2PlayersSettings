@@ -42,6 +42,10 @@ artifacts/
 # Visual Studio 临时文件和缓存
 .vs/
 
+# ASP.NET Core sensitive configuration files
+appsettings.json
+appsettings.*.json
+
 # Others
 *.DS_Store
 /publish/
