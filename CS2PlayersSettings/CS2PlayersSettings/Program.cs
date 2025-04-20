@@ -23,6 +23,9 @@ namespace CS2PlayersSettings
             // register PlayerDAL PlayerBLL
             builder.Services.AddScoped<PlayerDAL>();
             builder.Services.AddScoped<PlayerBLL>();
+            builder.Services.AddScoped<NavbarBLL>();
+            builder.Services.AddScoped<NavbarDAL>();
+
             builder.Services.AddScoped<List<DemoFileInfoModel>>();
             builder.Services.AddScoped<ImportDataByExcel>();
             builder.Services.AddScoped<PlayerDataService>();

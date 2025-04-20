@@ -401,6 +401,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
       "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\css\\sweetalert2.min.css",
       "PackagePath": "staticwebassets\\css\\sweetalert2.min.css"
     },
@@ -455,6 +459,14 @@
     {
       "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\js\\filepond.min.js",
       "PackagePath": "staticwebassets\\js\\filepond.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\js\\index.js",
+      "PackagePath": "staticwebassets\\js\\index.js"
+    },
+    {
+      "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\js\\lemonade.js",
+      "PackagePath": "staticwebassets\\js\\lemonade.js"
     },
     {
       "Id": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\js\\site.js",

@@ -20,6 +20,8 @@ public partial class PlayerDbContext : DbContext
 
     public virtual DbSet<MouseSetting> MouseSettings { get; set; }
 
+    public virtual DbSet<NavigationItem> NavigationItems { get; set; }
+
     public virtual DbSet<Player> Players { get; set; }
 
     public virtual DbSet<Team> Teams { get; set; }
@@ -28,6 +30,7 @@ public partial class PlayerDbContext : DbContext
 
     public virtual DbSet<ViewmodelSetting> ViewmodelSettings { get; set; }
 
+    
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<CrosshairSetting>(entity =>
@@ -62,6 +65,18 @@ public partial class PlayerDbContext : DbContext
                 .HasForeignKey(d => d.PlayerId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__MouseSett__Playe__403A8C7D");
+        });
+
+        modelBuilder.Entity<NavigationItem>(entity =>
+        {
+            entity.HasKey(e => e.NavId).HasName("PK__Navigati__67283A538DA7FA9D");
+
+            entity.Property(e => e.NavActive).HasDefaultValue(false);
+            entity.Property(e => e.NavDisabled).HasDefaultValue(false);
+            entity.Property(e => e.NavIcon).HasMaxLength(255);
+            entity.Property(e => e.NavLabel).HasMaxLength(255);
+            entity.Property(e => e.NavTarget).HasMaxLength(50);
+            entity.Property(e => e.NavUrl).HasMaxLength(255);
         });
 
         modelBuilder.Entity<Player>(entity =>

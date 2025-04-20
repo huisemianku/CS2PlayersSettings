@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rvCE6aEnWPHJY4FO7u0ZjT1INVZNzE/SUkbG4RoGpW0=",
+  "Hash": "G0m1mzYds1Z8RrxyC5IqL7GDzGrDIHB/c1zIxaGthBA=",
   "Source": "CS2PlayersSettings",
   "BasePath": "_content/CS2PlayersSettings",
   "Mode": "Default",
@@ -157,8 +157,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "o820safo3s",
-      "Integrity": "WP9ybtC1+M8XqUon+NwLoBizi6CGkrx6ug3LHaA11qo=",
+      "Fingerprint": "adwzx81zqi",
+      "Integrity": "YsCfhct4fm2BIP2obHYhA83N24qsgAnVftDZmJMNE3Y=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\output.css"
@@ -183,6 +183,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\css\\style.css",
+      "SourceId": "CS2PlayersSettings",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\",
+      "BasePath": "_content/CS2PlayersSettings",
+      "RelativePath": "css/style#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4cri7jkrry",
+      "Integrity": "5O3LIblAZKoUuxICL/qYkhgk5od31R8rh2AXDONywes=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
       "Identity": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\css\\sweetalert2.min.css",
@@ -2432,6 +2453,48 @@
       "OriginalItemSpec": "wwwroot\\js\\filepond-plugin-image-preview.min.js"
     },
     {
+      "Identity": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\js\\index.js",
+      "SourceId": "CS2PlayersSettings",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\",
+      "BasePath": "_content/CS2PlayersSettings",
+      "RelativePath": "js/index#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0mq7i0mc0o",
+      "Integrity": "iMsWSmfkD1X4wuFoYQcsEASNrWzz03vJ87K0Pzzw/ko=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\index.js"
+    },
+    {
+      "Identity": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\js\\lemonade.js",
+      "SourceId": "CS2PlayersSettings",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\",
+      "BasePath": "_content/CS2PlayersSettings",
+      "RelativePath": "js/lemonade#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "n0vus8qi6v",
+      "Integrity": "h9Ti+0za1LRAmqVbjUD13sfxXiILb8XFnml17tGNRXY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\lemonade.js"
+    },
+    {
       "Identity": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\js\\site.js",
       "SourceId": "CS2PlayersSettings",
       "SourceType": "Discovered",
@@ -4165,6 +4228,51 @@
       ]
     },
     {
+      "Route": "css/output.adwzx81zqi.css",
+      "AssetFile": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\css\\output.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "76607"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YsCfhct4fm2BIP2obHYhA83N24qsgAnVftDZmJMNE3Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 13:17:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "adwzx81zqi"
+        },
+        {
+          "Name": "label",
+          "Value": "css/output.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-YsCfhct4fm2BIP2obHYhA83N24qsgAnVftDZmJMNE3Y="
+        }
+      ]
+    },
+    {
       "Route": "css/output.css",
       "AssetFile": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\css\\output.css",
       "Selectors": [],
@@ -4175,7 +4283,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "76059"
+          "Value": "76607"
         },
         {
           "Name": "Content-Type",
@@ -4183,11 +4291,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"WP9ybtC1+M8XqUon+NwLoBizi6CGkrx6ug3LHaA11qo=\""
+          "Value": "\"YsCfhct4fm2BIP2obHYhA83N24qsgAnVftDZmJMNE3Y=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 15 Apr 2025 08:21:17 GMT"
+          "Value": "Sun, 20 Apr 2025 13:17:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4197,52 +4305,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-WP9ybtC1+M8XqUon+NwLoBizi6CGkrx6ug3LHaA11qo="
-        }
-      ]
-    },
-    {
-      "Route": "css/output.o820safo3s.css",
-      "AssetFile": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\css\\output.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "76059"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WP9ybtC1+M8XqUon+NwLoBizi6CGkrx6ug3LHaA11qo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 15 Apr 2025 08:21:17 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "o820safo3s"
-        },
-        {
-          "Name": "label",
-          "Value": "css/output.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-WP9ybtC1+M8XqUon+NwLoBizi6CGkrx6ug3LHaA11qo="
+          "Value": "sha256-YsCfhct4fm2BIP2obHYhA83N24qsgAnVftDZmJMNE3Y="
         }
       ]
     },
@@ -4325,6 +4388,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.4cri7jkrry.css",
+      "AssetFile": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\css\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4478"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5O3LIblAZKoUuxICL/qYkhgk5od31R8rh2AXDONywes=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 13:11:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4cri7jkrry"
+        },
+        {
+          "Name": "label",
+          "Value": "css/style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5O3LIblAZKoUuxICL/qYkhgk5od31R8rh2AXDONywes="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.css",
+      "AssetFile": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\css\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4478"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5O3LIblAZKoUuxICL/qYkhgk5od31R8rh2AXDONywes=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 13:11:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5O3LIblAZKoUuxICL/qYkhgk5od31R8rh2AXDONywes="
         }
       ]
     },
@@ -13099,6 +13244,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-1vQHytMrpOsKFyUUPuEVhxeNH6UhMX3uNetDRvlSpwU="
+        }
+      ]
+    },
+    {
+      "Route": "js/index.0mq7i0mc0o.js",
+      "AssetFile": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\js\\index.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1793"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iMsWSmfkD1X4wuFoYQcsEASNrWzz03vJ87K0Pzzw/ko=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 13:02:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0mq7i0mc0o"
+        },
+        {
+          "Name": "label",
+          "Value": "js/index.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iMsWSmfkD1X4wuFoYQcsEASNrWzz03vJ87K0Pzzw/ko="
+        }
+      ]
+    },
+    {
+      "Route": "js/index.js",
+      "AssetFile": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\js\\index.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1793"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iMsWSmfkD1X4wuFoYQcsEASNrWzz03vJ87K0Pzzw/ko=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 13:02:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iMsWSmfkD1X4wuFoYQcsEASNrWzz03vJ87K0Pzzw/ko="
+        }
+      ]
+    },
+    {
+      "Route": "js/lemonade.js",
+      "AssetFile": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\js\\lemonade.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "81779"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"h9Ti+0za1LRAmqVbjUD13sfxXiILb8XFnml17tGNRXY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 13:02:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-h9Ti+0za1LRAmqVbjUD13sfxXiILb8XFnml17tGNRXY="
+        }
+      ]
+    },
+    {
+      "Route": "js/lemonade.n0vus8qi6v.js",
+      "AssetFile": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\wwwroot\\js\\lemonade.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "81779"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"h9Ti+0za1LRAmqVbjUD13sfxXiILb8XFnml17tGNRXY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 13:02:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "n0vus8qi6v"
+        },
+        {
+          "Name": "label",
+          "Value": "js/lemonade.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-h9Ti+0za1LRAmqVbjUD13sfxXiILb8XFnml17tGNRXY="
         }
       ]
     },

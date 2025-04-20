@@ -1,0 +1,194 @@
+:root {
+    --lm-switch-front-color: 0,0,0;
+    --lm-switch-primary-color: 255,255,255;
+    --lm-switch-main-color: var(--lm-main-color, #1565C0);
+    --lm-switch-main-color-alpha: var(--lm-main-color-alpha, #1565C088);
+}
+
+.lm-switch[data-color="green"] {
+    --lm-switch-main-color: var(--lm-main-color, #2E7D32);
+    --lm-switch-main-color-alpha: var(--lm-main-color-alpha, #2E7D3288);
+}
+
+.lm-switch[data-color="orange"] {
+    --lm-switch-main-color: var(--lm-main-color, #EF6C00);
+    --lm-switch-main-color-alpha: var(--lm-main-color-alpha, #EF6C0088);
+}
+
+.lm-switch[data-color="red"] {
+    --lm-switch-main-color: var(--lm-main-color, #C62828);
+    --lm-switch-main-color-alpha: var(--lm-main-color-alpha, #C6282888);
+}
+
+.lm-switch[data-color="purple"] {
+    --lm-switch-main-color: var(--lm-main-color, #6A1B9A);
+    --lm-switch-main-color-alpha: var(--lm-main-color-alpha, #6A1B9A88);
+}
+
+.lm-switch {
+    position: relative;
+    display: inline-flex;
+    z-index: 0;
+    align-items: center;
+    min-width: 36px;
+}
+
+label.lm-switch {
+    display: inline-flex;
+}
+
+.lm-switch:before {
+    content: '';
+    min-height: 1em;
+}
+
+.lm-switch > input {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+    left: 0;
+    margin: 0;
+    display: block;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    max-width: 30px;
+    max-height: 30px;
+    outline: none;
+    opacity: 0;
+    transform: scale(1);
+    pointer-events: none;
+    transition: opacity 0.3s 0.1s, transform 0.2s 0.1s;
+}
+
+.lm-switch > span {
+    display: inline-flex;
+    width: 100%;
+    line-height: 24px;
+    cursor: pointer;
+    margin: 0 0 0 45px;
+    align-items: center;
+    box-sizing: border-box;
+    max-width: -webkit-fill-available;
+}
+
+.lm-switch > span:empty {
+    margin: 0;
+}
+
+.lm-switch > span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    border-radius: 7px;
+    width: 36px;
+    height: 14px;
+    background-color: rgba(var(--lm-switch-front-color), 0.38);
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+.lm-switch > span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(var(--lm-switch-primary-color));
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.lm-switch > input:checked {
+    left: 11px;
+    background-color: var(--lm-switch-main-color);
+}
+
+/*.lm-switch > input:checked {
+    left: 11px;
+    background-color: #e41942;
+}*/
+
+.lm-switch > input:not(:checked) {
+    left: -5px;
+    background-color: var(--lm-secondary-color, #6A6A6A);
+}
+
+.lm-switch > input:checked + span::before {
+    background-color: var(--lm-switch-main-color-alpha);
+}
+
+.lm-switch > input:checked + span::after {
+    background-color: var(--lm-switch-main-color);
+    transform: translateX(16px);
+}
+
+/* Hover, Focus */
+.lm-switch:hover > input {
+    opacity: 0.04;
+}
+
+.lm-switch > input:focus {
+    opacity: 0.12;
+}
+
+.lm-switch:hover > input:focus {
+    opacity: 0.16;
+}
+
+.lm-switch > input:active {
+    opacity: 1;
+    transform: scale(0);
+    transition: transform 0s, opacity 0s;
+}
+
+.lm-switch > input:active + span::before {
+    background-color: var(--lm-switch-main-color-alpha);
+}
+
+.lm-switch > input:checked:active + span::before {
+    background-color: rgba(var(--lm-switch-front-color), 0.38);
+}
+
+.lm-switch > input:disabled {
+    opacity: 0;
+}
+
+.lm-switch > input:disabled + span {
+    color: rgb(var(--lm-switch-front-color));
+    opacity: 0.50;
+    cursor: default;
+}
+
+.lm-switch > input:disabled + span::before {
+    background-color: rgba(var(--lm-switch-front-color), 0.38);
+}
+
+.lm-switch > input:checked:disabled + span::before {
+    background-color: var(--lm-switch-main-color-alpha);
+}
+
+.lm-switch[position="right"] > span {
+    margin: 0 45px 0 0;
+}
+
+.lm-switch[position="right"] > input {
+    left: initial;
+    right: 11px;
+}
+
+.lm-switch[position="right"] > input:checked {
+    left: initial;
+    right: -5px;
+}
+
+.lm-switch[position="right"] > span::before {
+    left: initial;
+    right: 0;
+}
+
+.lm-switch[position="right"] > span::after {
+    left: initial;
+    right: 16px;
+}

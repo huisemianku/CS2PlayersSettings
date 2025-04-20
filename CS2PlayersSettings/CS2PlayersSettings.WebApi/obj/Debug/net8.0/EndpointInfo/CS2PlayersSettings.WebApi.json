@@ -5,6 +5,44 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/Navbar/GetNavBarItems": {
+      "get": {
+        "tags": [
+          "Navbar"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NavigationItem"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NavigationItem"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NavigationItem"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Player/getAllPlayers": {
       "get": {
         "tags": [
@@ -373,6 +411,45 @@
           },
           "player": {
             "$ref": "#/components/schemas/Player"
+          }
+        },
+        "additionalProperties": false
+      },
+      "NavigationItem": {
+        "type": "object",
+        "properties": {
+          "navId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "navLabel": {
+            "type": "string",
+            "nullable": true
+          },
+          "navUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "navTarget": {
+            "type": "string",
+            "nullable": true
+          },
+          "navDisabled": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "navActive": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "navIcon": {
+            "type": "string",
+            "nullable": true
+          },
+          "navOrder": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
           }
         },
         "additionalProperties": false

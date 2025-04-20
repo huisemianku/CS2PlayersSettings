@@ -11,6 +11,18 @@ namespace CS2PlayersSettings.WebApi
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            // Add CORS policy
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowFrontend", policy =>
+                {
+                    policy.WithOrigins("http://localhost:5173") // Allow your frontend origin
+                          .AllowAnyHeader()                    // Allow any headers
+                          .AllowAnyMethod()                    // Allow any HTTP methods (GET, POST, etc.)
+                          .AllowCredentials();                 // Allow credentials (optional, if needed)
+                });
+            });
+
             // Add services to the container.
 
             // 添加 DbContext 服务
@@ -20,6 +32,8 @@ namespace CS2PlayersSettings.WebApi
             builder.Services.AddScoped<PlayerWebApiBLL>();
             builder.Services.AddScoped<PlayerWebApiDAL>();
 
+            builder.Services.AddScoped<NavbarWebApiBLL>();
+            builder.Services.AddScoped<NavbarWebApiDAL>();
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -35,7 +49,8 @@ namespace CS2PlayersSettings.WebApi
             }
 
             app.UseHttpsRedirection();
-
+            // 启用 CORS 中间件
+            app.UseCors("AllowFrontend");
             app.UseAuthorization();
 
 

@@ -4,6 +4,7 @@ wwwroot\css\filepond-plugin-image-preview.min.css
 wwwroot\css\input.css
 wwwroot\css\output.css
 wwwroot\css\site.css
+wwwroot\css\style.css
 wwwroot\css\sweetalert2.min.css
 wwwroot\favicon.ico
 wwwroot\Image\CS2.jpg
@@ -111,6 +112,8 @@ wwwroot\js\filepond-plugin-image-preview.esm.js
 wwwroot\js\filepond-plugin-image-preview.esm.min.js
 wwwroot\js\filepond-plugin-image-preview.js
 wwwroot\js\filepond-plugin-image-preview.min.js
+wwwroot\js\index.js
+wwwroot\js\lemonade.js
 wwwroot\js\site.js
 wwwroot\js\sweetalert2.min.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css

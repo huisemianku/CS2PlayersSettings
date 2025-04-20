@@ -1,0 +1,88 @@
+﻿@page
+@model CS2PlayersSettings.Pages.Navbar.IndexModel
+@{
+}
+<link href="~/css/style.css" rel="stylesheet" />
+<script src="~/js/lemonade.js"></script>
+<script src="~/js/index.js"></script>
+<div class="bg-white rounded-lg">
+    <header class="flex items-center justify-between p-4">
+        <div>
+            <h2 class="font-bold">网站菜单管理</h2>
+            <p class="text-sm text-gray-600">定制网站前台显示的菜单项</p>
+        </div>
+        <div>
+            <button class="bg-white rounded-lg shadow-md py-2 px-4 hover:bg-gray-50">添加菜单</button>
+        </div>
+    </header>
+    <section class="p-4 flex flex-wrap items-start gap-4">
+        @foreach (var item in Model.NavigationItems)
+        {
+            <div class="flex flex-nowrap content-center">
+                <div class="bg-gray-700 w-10 h-15 rounded-l-md content-center text-center text-white text-xl">
+                    @item.NavOrder
+                </div>
+                <div class="bg-gray-300 px-4 h-15 rounded-r-md flex items-center justify-start">
+                    <div class="bg-[#fefefe] w-30 h-9 rounded-sm content-center">
+                        <span class="pl-1 text-sm font-bold">@item.NavLabel</span>
+                    </div>
+                    <div class="bg-gray-200 w-32 h-9 rounded-sm ml-2 content-center">
+                        <span class="pl-1 text-sm font-bold opacity-50 cursor-not-allowed text-gray-500">@item.NavUrl</span>
+                    </div>
+                    <div class="bg-gray-200 w-40 h-9 rounded-sm ml-2 content-center">
+                        <select class="block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200">
+                            @if (Model != null && Model.NavigationItems != null) // 确保 Model 和 Items 不为空
+                            {
+                                string displayValue = "";
+                                switch (@item.NavTarget)
+                                {
+                                    case "_self":
+                                        displayValue = "当前窗口打开";
+                                        break;
+                                    case "_blank":
+                                        displayValue = "新窗口打开";
+                                        break;
+                                    default:
+                                        displayValue = "未知"; // 可选：处理未知情况
+                                        break;
+                                }
+                                <option value="@item.NavTarget">@displayValue</option>
+                            }
+
+                        </select>
+                    </div>
+                    <div class="ml-2">
+                        <lm-switch id="showSwitch" text="显示" value="@item.NavDisabled" data-orderId="@item.NavOrder"></lm-switch>
+                    </div>
+                    <div class="ml-2">
+                        <lm-switch id="recommendSwitch" text="推荐" value="@item.NavActive" data-orderId="@item.NavOrder"></lm-switch>
+                    </div>
+                    <div class="ml-6 w-22 h-9 bg-white text-center content-center rounded-md">
+                        <button class="w-full h-full cursor-pointer text-sm">删除菜单</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </section>
+</div>
+<script>
+       const showSwitches = document.querySelectorAll('#showSwitch'); 
+       const recommendSwitches = document.querySelectorAll('#recommendSwitch');
+
+       showSwitches.forEach(switchElement => {
+        switchElement.addEventListener('change', function(event) {
+            const isChecked = event.target.checked; // 获取开关值
+            const orderId = switchElement.dataset.orderid; // 获取 data-orderId
+            console.log('data-orderId:', orderId);
+            console.log('Switch value:', isChecked);
+            });
+        });
+    recommendSwitches.forEach(switchElement => {
+        switchElement.addEventListener('change', function(event) {
+            const isChecked = event.target.checked; // 获取开关值
+            const orderId = switchElement.dataset.orderid; // 获取 data-orderId
+            console.log('data-orderId:', orderId);
+            console.log('Switch value:', isChecked);
+            });
+        });
+</script>

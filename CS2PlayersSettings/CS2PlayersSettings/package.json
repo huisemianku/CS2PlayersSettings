@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@lemonadejs/switch": "^5.0.0",
     "@tailwindcss/cli": "^4.0.14",
     "filepond": "^4.32.7",
     "filepond-plugin-file-validate-size": "^2.2.8",
