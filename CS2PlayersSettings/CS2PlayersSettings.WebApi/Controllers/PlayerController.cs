@@ -1,6 +1,7 @@
 ﻿using CS2_PlayerSettings.Data.Repository.Model;
 using CS2PlayersSettings.Business.WebApi;
 using CS2PlayersSettings.Data.Repository.Entities;
+using CS2PlayersSettings.Data.Repository.Model;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CS2PlayersSettings.WebApi.Controllers
@@ -20,6 +21,13 @@ namespace CS2PlayersSettings.WebApi.Controllers
         public async Task<List<Player>> getAllPlayers()
         {
             return await _playerSettingsBLL.GetAllPlayersAsync();
+        }
+
+        [HttpGet]
+        [Route("GetAllPlayersPage")]
+        public async Task<PagedResult<Player>> GetAllPlayersPage(int page, int pageSize, string search = "")
+        {
+            return await _playerSettingsBLL.GetAllPlayersPageAsync(page, pageSize, search);
         }
 
         [HttpGet]

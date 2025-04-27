@@ -41,6 +41,42 @@
   },
   {
     "ContainingType": "CS2PlayersSettings.WebApi.Controllers.PlayerController",
+    "Method": "GetAllPlayersPage",
+    "RelativePath": "api/Player/GetAllPlayersPage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "search",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CS2PlayersSettings.Data.Repository.Model.PagedResult\u00601[[CS2PlayersSettings.Data.Repository.Entities.Player, CS2PlayersSettings.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CS2PlayersSettings.WebApi.Controllers.PlayerController",
     "Method": "GetPlayersById",
     "RelativePath": "api/Player/GetPlayersById",
     "HttpMethod": "GET",

@@ -1,5 +1,7 @@
 ﻿using CS2_PlayerSettings.Data.Repository.Model;
+using CS2PlayersSettings.Data.Repository;
 using CS2PlayersSettings.Data.Repository.Entities;
+using CS2PlayersSettings.Data.Repository.Model;
 using CS2PlayersSettings.Data.WebApi;
 using System;
 using System.Collections.Generic;
@@ -22,6 +24,13 @@ namespace CS2PlayersSettings.Business.WebApi
         public async Task<List<Player>> GetAllPlayersAsync()
         {
             return await _playerWebApiDAL.GetAllPlayersAsync();
+        }
+        #endregion
+
+        #region 获取所有玩家 分页查询
+        public async Task<PagedResult<Player>> GetAllPlayersPageAsync(int page, int pageSize, string search = "")
+        {
+            return await _playerWebApiDAL.GetAllPlayersPageAsync(page, pageSize, search);
         }
         #endregion
 

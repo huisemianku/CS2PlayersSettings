@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CS2_PlayerSettings.Data.Repository.Model;
+using CS2PlayersSettings.Data.Repository.Model;
 
 namespace CS2PlayersSettings.Data.WebApi
 {
@@ -36,6 +37,46 @@ namespace CS2PlayersSettings.Data.WebApi
             catch (Exception)
             {
 
+                throw;
+            }
+        }
+        #endregion
+
+        #region 获取所有玩家 分页查询
+        public async Task<PagedResult<Player>> GetAllPlayersPageAsync(int page, int pageSize, string search = "")
+        {
+            try
+            {
+                var query = _playerDbContext.Players.AsQueryable();
+
+                // 搜索过滤
+                if (!string.IsNullOrEmpty(search))
+                {
+                    query = query.Where(p => p.PlayerNickName.Contains(search));
+                }
+
+                // 获取总条数
+                var totalItems = await query.CountAsync();
+
+                // 分页查询
+                var players = await query
+                    .OrderBy(p => p.PlayerTopRanking.HasValue ? 0 : 1)
+                    .ThenBy(p => p.PlayerTopRanking.HasValue ? p.PlayerTopRanking : null)
+                    .ThenBy(p => p.Team.TeamRanking)
+                    .Skip((page - 1) * pageSize)
+                    .Take(pageSize)
+                    .ToListAsync();
+
+                return new PagedResult<Player>
+                {
+                    Items = players,
+                    TotalItems = totalItems,
+                    PageNumber = page,
+                    PageSize = pageSize
+                };
+            }
+            catch (Exception)
+            {
                 throw;
             }
         }
