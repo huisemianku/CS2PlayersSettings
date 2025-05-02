@@ -198,5 +198,57 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "CS2PlayersSettings.WebApi.Controllers.UserController",
+    "Method": "Logout",
+    "RelativePath": "api/User/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS2PlayersSettings.WebApi.Controllers.UserController",
+    "Method": "UserLogin",
+    "RelativePath": "api/User/UserLogin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "CS2PlayersSettings.Data.Repository.Model.User.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS2PlayersSettings.WebApi.Controllers.UserController",
+    "Method": "UserRegister",
+    "RelativePath": "api/User/UserRegister",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userReModel",
+        "Type": "CS2PlayersSettings.Data.Repository.Model.User.RegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS2PlayersSettings.WebApi.Controllers.UserController",
+    "Method": "VerifyToken",
+    "RelativePath": "api/User/verify",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

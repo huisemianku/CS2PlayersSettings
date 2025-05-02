@@ -26,11 +26,13 @@ public partial class PlayerDbContext : DbContext
 
     public virtual DbSet<Team> Teams { get; set; }
 
+    public virtual DbSet<User> Users { get; set; }
+
     public virtual DbSet<VideoSetting> VideoSettings { get; set; }
 
     public virtual DbSet<ViewmodelSetting> ViewmodelSettings { get; set; }
 
-    
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<CrosshairSetting>(entity =>
@@ -118,6 +120,28 @@ public partial class PlayerDbContext : DbContext
 
             entity.Property(e => e.TeamImg).HasMaxLength(120);
             entity.Property(e => e.TeamName).HasMaxLength(50);
+        });
+
+        modelBuilder.Entity<User>(entity =>
+        {
+            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CC4CCA7FEE91");
+
+            entity.HasIndex(e => e.Username, "UQ__Users__536C85E4F1AE69EE").IsUnique();
+
+            entity.HasIndex(e => e.Email, "UQ__Users__A9D1053415B585B9").IsUnique();
+
+            entity.Property(e => e.CreatedAt)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.Email).HasMaxLength(100);
+            entity.Property(e => e.PasswordHash).HasMaxLength(255);
+            entity.Property(e => e.Roles)
+                .HasMaxLength(20)
+                .HasDefaultValue("user");
+            entity.Property(e => e.UpdatedAt)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.Username).HasMaxLength(50);
         });
 
         modelBuilder.Entity<VideoSetting>(entity =>

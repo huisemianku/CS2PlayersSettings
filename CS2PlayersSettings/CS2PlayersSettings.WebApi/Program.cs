@@ -1,7 +1,10 @@
 using CS2PlayersSettings.Business.WebApi;
 using CS2PlayersSettings.Data.Repository;
 using CS2PlayersSettings.Data.WebApi;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace CS2PlayersSettings.WebApi
 {
@@ -28,12 +31,54 @@ namespace CS2PlayersSettings.WebApi
             // 添加 DbContext 服务
             builder.Services.AddDbContext<PlayerDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            // 配置 JWT 认证
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
+            {
+                var jwtSettings = builder.Configuration.GetSection("Jwt");
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = jwtSettings["Issuer"],
+                    ValidAudience = jwtSettings["Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["Key"]))
+                };
+
+                // 从 Cookie 提取 token
+                options.Events = new JwtBearerEvents
+                {
+                    OnMessageReceived = context =>
+                    {
+                        var token = context.Request.Cookies["auth_token"];
+                        if (!string.IsNullOrEmpty(token))
+                        {
+                            context.Token = token;
+                        }
+                        return Task.CompletedTask;
+                    }
+                };
+            });
+
+
+
+
             // 使用依赖注入 注册BLL和DAL
             builder.Services.AddScoped<PlayerWebApiBLL>();
             builder.Services.AddScoped<PlayerWebApiDAL>();
 
             builder.Services.AddScoped<NavbarWebApiBLL>();
             builder.Services.AddScoped<NavbarWebApiDAL>();
+
+            builder.Services.AddScoped<UserWebApiBLL>();
+            builder.Services.AddScoped<UserWebApiDAL>();
+
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
