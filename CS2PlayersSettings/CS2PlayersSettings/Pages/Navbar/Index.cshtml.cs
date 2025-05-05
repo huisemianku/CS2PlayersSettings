@@ -1,5 +1,5 @@
 using CS2PlayersSettings.Business;
-using CS2PlayersSettings.Data.Repository.Entities;
+using CS2PlayersSettings.Data.Repository.Entities.Navbars;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -14,9 +14,9 @@ namespace CS2PlayersSettings.Pages.Navbar
         }
         public List<NavigationItem> NavigationItems { get; set; }
 
-        public async Task OnGet()
-        {
-            NavigationItems = await _navbarBLL.GetAllNavbarItemsAsync();
-        }
+        //public async Task OnGet()
+        //{
+        //    NavigationItems = await _navbarBLL.GetAllNavbarItemsAsync();
+        //}
     }
 }

@@ -1,7 +1,7 @@
 using CS2PlayersSettings.Business;
 using CS2PlayersSettings.Data.Repository.DemoCrosshairCode;
 using CS2PlayersSettings.Data.Repository.DemoCrosshairCode.Structs;
-using CS2PlayersSettings.Data.Repository.Entities;
+using CS2PlayersSettings.Data.Repository.Entities.Players;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Text.Json;
@@ -102,7 +102,7 @@ namespace CS2PlayersSettings.Pages.PlayerFile
                 {
                     return new JsonResult(new { success = false, message = "Invalid data" });
                 }
-                await _playerBll.updatePlayerVideoSettingsById(videoSetting.PlayerId, videoSetting.VideoId, videoSetting);
+                //await _playerBll.updatePlayerVideoSettingsById(videoSetting.PlayerId, videoSetting.VideoId, videoSetting);
                 return new JsonResult(new { success = true, message = "Settings updated successfully" });
             }
             catch (Exception ex)

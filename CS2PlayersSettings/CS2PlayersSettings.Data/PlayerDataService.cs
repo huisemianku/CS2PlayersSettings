@@ -1,16 +1,13 @@
 ﻿using CS2PlayersSettings.Data.Repository;
 using CS2PlayersSettings.Data.Repository.Entities;
+using CS2PlayersSettings.Data.Repository.Entities.Players;
 using CS2PlayersSettings.Data.Repository.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+
 
 namespace CS2PlayersSettings.Data
 {

@@ -1,6 +1,6 @@
 ﻿using CS2_PlayerSettings.Data.Repository.Model;
 using CS2PlayersSettings.Business.WebApi;
-using CS2PlayersSettings.Data.Repository.Entities;
+using CS2PlayersSettings.Data.Repository.Entities.Players;
 using CS2PlayersSettings.Data.Repository.Model;
 using Microsoft.AspNetCore.Mvc;
 

@@ -4,6 +4,7 @@ using CS2PlayersSettings.Data.WebApi;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using System.Reflection;
 using System.Text;
 
 namespace CS2PlayersSettings.WebApi
@@ -14,23 +15,18 @@ namespace CS2PlayersSettings.WebApi
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add CORS policy
-            builder.Services.AddCors(options =>
-            {
-                options.AddPolicy("AllowFrontend", policy =>
-                {
-                    policy.WithOrigins("http://localhost:5173") // Allow your frontend origin
-                          .AllowAnyHeader()                    // Allow any headers
-                          .AllowAnyMethod()                    // Allow any HTTP methods (GET, POST, etc.)
-                          .AllowCredentials();                 // Allow credentials (optional, if needed)
-                });
-            });
 
             // Add services to the container.
 
             // 添加 DbContext 服务
             builder.Services.AddDbContext<PlayerDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services.AddDbContext<UserDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services.AddDbContext<NavbarDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             // 配置 JWT 认证
             builder.Services.AddAuthentication(options =>
@@ -66,9 +62,6 @@ namespace CS2PlayersSettings.WebApi
                 };
             });
 
-
-
-
             // 使用依赖注入 注册BLL和DAL
             builder.Services.AddScoped<PlayerWebApiBLL>();
             builder.Services.AddScoped<PlayerWebApiDAL>();
@@ -78,12 +71,27 @@ namespace CS2PlayersSettings.WebApi
 
             builder.Services.AddScoped<UserWebApiBLL>();
             builder.Services.AddScoped<UserWebApiDAL>();
+  
+            builder.Logging.AddConsole(); // 添加控制台日志记录器
+            builder.Logging.AddDebug(); // 添加调试日志记录器 (输出到 Visual Studio 的输出窗口)
+            // Add CORS policy
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowFrontend", policy =>
+                {
+                    policy.WithOrigins("https://localhost:8080") // Allow your frontend origin
+                          .AllowAnyHeader()                    // Allow any headers
+                          .AllowAnyMethod()                    // Allow any HTTP methods (GET, POST, etc.)
+                          .AllowCredentials();                 // Allow credentials (optional, if needed)
+                });
+            });
+
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

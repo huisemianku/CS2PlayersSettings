@@ -1,5 +1,5 @@
 ﻿using CS2PlayersSettings.Business.WebApi;
-using CS2PlayersSettings.Data.Repository.Entities;
+using CS2PlayersSettings.Data.Repository.Entities.Navbars;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CS2PlayersSettings.WebApi.Controllers

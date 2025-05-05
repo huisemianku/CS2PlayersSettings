@@ -1,17 +1,11 @@
 ﻿using ClosedXML.Excel;
 using CS2PlayersSettings.Business;
-using CS2PlayersSettings.Data.Repository.Entities;
+using CS2PlayersSettings.Data.Repository.Entities.Players;
 using CS2PlayersSettings.Data.Repository.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace CS2PlayersSettings.Data.Repository.Helper
 {

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CS2PlayersSettings.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97bb37be21e9829b835ddab77da47c3d5a32cee3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+92f5ea80d46926e5bd9ccb01b0152089e43e8a87")]
 [assembly: System.Reflection.AssemblyProductAttribute("CS2PlayersSettings.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CS2PlayersSettings.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

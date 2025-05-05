@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CS2PlayersSettings.Data.Repository.Entities.Navbars;
 
 namespace CS2PlayersSettings.Business.WebApi
 {

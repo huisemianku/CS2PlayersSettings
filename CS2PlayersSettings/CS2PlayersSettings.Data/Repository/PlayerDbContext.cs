@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using CS2PlayersSettings.Data.Repository.Entities;
+using CS2PlayersSettings.Data.Repository.Entities.Players;
 using Microsoft.EntityFrameworkCore;
 
 namespace CS2PlayersSettings.Data.Repository;
@@ -20,13 +20,9 @@ public partial class PlayerDbContext : DbContext
 
     public virtual DbSet<MouseSetting> MouseSettings { get; set; }
 
-    public virtual DbSet<NavigationItem> NavigationItems { get; set; }
-
     public virtual DbSet<Player> Players { get; set; }
 
     public virtual DbSet<Team> Teams { get; set; }
-
-    public virtual DbSet<User> Users { get; set; }
 
     public virtual DbSet<VideoSetting> VideoSettings { get; set; }
 
@@ -69,18 +65,6 @@ public partial class PlayerDbContext : DbContext
                 .HasConstraintName("FK__MouseSett__Playe__403A8C7D");
         });
 
-        modelBuilder.Entity<NavigationItem>(entity =>
-        {
-            entity.HasKey(e => e.NavId).HasName("PK__Navigati__67283A538DA7FA9D");
-
-            entity.Property(e => e.NavActive).HasDefaultValue(false);
-            entity.Property(e => e.NavDisabled).HasDefaultValue(false);
-            entity.Property(e => e.NavIcon).HasMaxLength(255);
-            entity.Property(e => e.NavLabel).HasMaxLength(255);
-            entity.Property(e => e.NavTarget).HasMaxLength(50);
-            entity.Property(e => e.NavUrl).HasMaxLength(255);
-        });
-
         modelBuilder.Entity<Player>(entity =>
         {
             entity.HasKey(e => e.PlayerId).HasName("PK__Player__4A4E74C803A1DA30");
@@ -120,28 +104,6 @@ public partial class PlayerDbContext : DbContext
 
             entity.Property(e => e.TeamImg).HasMaxLength(120);
             entity.Property(e => e.TeamName).HasMaxLength(50);
-        });
-
-        modelBuilder.Entity<User>(entity =>
-        {
-            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CC4CCA7FEE91");
-
-            entity.HasIndex(e => e.Username, "UQ__Users__536C85E4F1AE69EE").IsUnique();
-
-            entity.HasIndex(e => e.Email, "UQ__Users__A9D1053415B585B9").IsUnique();
-
-            entity.Property(e => e.CreatedAt)
-                .HasDefaultValueSql("(getdate())")
-                .HasColumnType("datetime");
-            entity.Property(e => e.Email).HasMaxLength(100);
-            entity.Property(e => e.PasswordHash).HasMaxLength(255);
-            entity.Property(e => e.Roles)
-                .HasMaxLength(20)
-                .HasDefaultValue("user");
-            entity.Property(e => e.UpdatedAt)
-                .HasDefaultValueSql("(getdate())")
-                .HasColumnType("datetime");
-            entity.Property(e => e.Username).HasMaxLength(50);
         });
 
         modelBuilder.Entity<VideoSetting>(entity =>

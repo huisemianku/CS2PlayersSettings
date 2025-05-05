@@ -1,13 +1,7 @@
 ﻿using CS2_PlayerSettings.Data.Repository.Model;
-using CS2PlayersSettings.Data.Repository;
-using CS2PlayersSettings.Data.Repository.Entities;
+using CS2PlayersSettings.Data.Repository.Entities.Players;
 using CS2PlayersSettings.Data.Repository.Model;
 using CS2PlayersSettings.Data.WebApi;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CS2PlayersSettings.Business.WebApi
 {

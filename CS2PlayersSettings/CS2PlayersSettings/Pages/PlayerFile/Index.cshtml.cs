@@ -1,8 +1,6 @@
 using ClosedXML.Excel;
 using CS2PlayersSettings.Business;
-using CS2PlayersSettings.Data.Repository.Entities;
-using DocumentFormat.OpenXml.Spreadsheet;
-using DocumentFormat.OpenXml.Wordprocessing;
+using CS2PlayersSettings.Data.Repository.Entities.Players;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using X.PagedList;

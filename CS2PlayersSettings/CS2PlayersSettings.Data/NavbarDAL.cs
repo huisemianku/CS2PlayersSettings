@@ -1,20 +1,15 @@
 ﻿using CS2PlayersSettings.Data.Repository;
-using CS2PlayersSettings.Data.Repository.Entities;
+using CS2PlayersSettings.Data.Repository.Entities.Navbars;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CS2PlayersSettings.Data
 {
     public class NavbarDAL
     {
-        private readonly PlayerDbContext _playerDbContext;
-        public NavbarDAL(PlayerDbContext playerDbContext)
+        private readonly NavbarDbContext _navbarDbContext;
+        public NavbarDAL(NavbarDbContext navbarDbContext)
         {
-            _playerDbContext = playerDbContext;
+            _navbarDbContext = navbarDbContext;
         }
 
         #region 获取所有导航栏
@@ -22,7 +17,7 @@ namespace CS2PlayersSettings.Data
         {
             try
             {
-                var items = await _playerDbContext.NavigationItems.ToListAsync();
+                var items = await _navbarDbContext.NavigationItems.ToListAsync();
                 return items;
             }
             catch (Exception)

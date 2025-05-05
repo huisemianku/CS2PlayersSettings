@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CS2PlayersSettings.Data.Repository.Entities;
+namespace CS2PlayersSettings.Data.Repository.Entities.Players;
 
 public partial class CrosshairSetting
 {

@@ -1,13 +1,7 @@
-﻿using CS2PlayersSettings.Data.Repository.Entities;
-using CS2PlayersSettings.Data.Repository.Model;
+﻿using CS2PlayersSettings.Data.Repository.Entities.Players;
 using CS2PlayersSettings.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using X.PagedList;
-using CS2PlayersSettings.Data.Repository;
+
 
 namespace CS2PlayersSettings.Business
 {

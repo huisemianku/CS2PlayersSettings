@@ -1,16 +1,11 @@
 ﻿using CS2PlayersSettings.Data.Repository.DemoCrosshairCode.Structs;
 using CS2PlayersSettings.Data.Repository.DemoCrosshairCode;
-using CS2PlayersSettings.Data.Repository.Entities;
-using CS2PlayersSettings.Data.Repository;
+using CS2PlayersSettings.Data.Repository.Entities.Players;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CS2_PlayerSettings.Data.Repository.Model;
 using CS2PlayersSettings.Data.Repository.Model;
+using CS2PlayersSettings.Data.Repository;
 
 namespace CS2PlayersSettings.Data.WebApi
 {
@@ -266,7 +261,7 @@ namespace CS2PlayersSettings.Data.WebApi
                     MouseSettings = await GetPlayerMouseSettingsById(playerId),
                     CrosshairSettings = await GetPlayerCrosshairsById(playerId),
                     ViewmodelSettings = await GetPlayerViewmodelById(playerId),
-                    VideoSettings = await GetPlayerVideoById(playerId)
+                    //VideoSettings = await GetPlayerVideoById(playerId)
                 };
                 return playerSettings;
             }

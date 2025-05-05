@@ -1,10 +1,4 @@
-﻿using CS2PlayersSettings.Data.Repository.Entities;
-using CS2PlayersSettings.Data.Repository;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CS2PlayersSettings.Data.Repository.Entities.Navbars;
 using CS2PlayersSettings.Data;
 
 namespace CS2PlayersSettings.Business

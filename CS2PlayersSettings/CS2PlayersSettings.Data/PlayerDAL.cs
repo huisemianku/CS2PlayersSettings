@@ -1,11 +1,9 @@
-﻿using CS2PlayersSettings.Data.Repository.Entities;
-using CS2PlayersSettings.Data.Repository;
-using CS2PlayersSettings.Data.Repository.Model;
+﻿using CS2PlayersSettings.Data.Repository;
 using Microsoft.EntityFrameworkCore;
 using X.PagedList;
 using X.PagedList.Extensions;
 using CS2PlayersSettings.Data.Repository.Helper;
-using Microsoft.Extensions.Configuration;
+using CS2PlayersSettings.Data.Repository.Entities.Players;
 
 namespace CS2PlayersSettings.Data
 {

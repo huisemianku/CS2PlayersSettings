@@ -1,13 +1,7 @@
-﻿using CS2PlayersSettings.Data.Repository.Entities;
-using CS2PlayersSettings.Data.Repository.Model.User;
-using CS2PlayersSettings.Data.Repository;
+﻿using CS2PlayersSettings.Data.Repository.Model.User;
 using CS2PlayersSettings.Data.WebApi;
-using Isopoh.Cryptography.Argon2;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CS2PlayersSettings.Data.Repository.Entities.Users;
+using CS2PlayersSettings.Data.Repository;
 
 namespace CS2PlayersSettings.Business.WebApi
 {
@@ -31,6 +25,13 @@ namespace CS2PlayersSettings.Business.WebApi
         public async Task<User?> UserLogin(LoginDto userLoModel)
         {
             return await _userWebApiDAL.UserLogin(userLoModel);
+        }
+        #endregion
+
+        #region 获取用户信息 BY USERID
+        public async Task<User> GetUserInfoAsync(int userId)
+        {
+            return await _userWebApiDAL.GetUserInfoAsync(userId);
         }
         #endregion
     }

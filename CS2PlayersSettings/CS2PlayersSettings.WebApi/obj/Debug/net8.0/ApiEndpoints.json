@@ -1,5 +1,57 @@
 [
   {
+    "ContainingType": "CS2PlayersSettings.WebApi.Controllers.AuthController",
+    "Method": "Logout",
+    "RelativePath": "api/Auth/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS2PlayersSettings.WebApi.Controllers.AuthController",
+    "Method": "UserLogin",
+    "RelativePath": "api/Auth/UserLogin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "CS2PlayersSettings.Data.Repository.Model.User.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS2PlayersSettings.WebApi.Controllers.AuthController",
+    "Method": "UserRegister",
+    "RelativePath": "api/Auth/UserRegister",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userReModel",
+        "Type": "CS2PlayersSettings.Data.Repository.Model.User.RegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS2PlayersSettings.WebApi.Controllers.AuthController",
+    "Method": "VerifyToken",
+    "RelativePath": "api/Auth/verify",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CS2PlayersSettings.WebApi.Controllers.NavbarController",
     "Method": "GetNavBarItems",
     "RelativePath": "api/Navbar/GetNavBarItems",
@@ -9,7 +61,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[CS2PlayersSettings.Data.Repository.Entities.NavigationItem, CS2PlayersSettings.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[CS2PlayersSettings.Data.Repository.Entities.Navbars.NavigationItem, CS2PlayersSettings.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -29,7 +81,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[CS2PlayersSettings.Data.Repository.Entities.Player, CS2PlayersSettings.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[CS2PlayersSettings.Data.Repository.Entities.Players.Player, CS2PlayersSettings.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -65,7 +117,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "CS2PlayersSettings.Data.Repository.Model.PagedResult\u00601[[CS2PlayersSettings.Data.Repository.Entities.Player, CS2PlayersSettings.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "CS2PlayersSettings.Data.Repository.Model.PagedResult\u00601[[CS2PlayersSettings.Data.Repository.Entities.Players.Player, CS2PlayersSettings.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -91,7 +143,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "CS2PlayersSettings.Data.Repository.Entities.Player",
+        "Type": "CS2PlayersSettings.Data.Repository.Entities.Players.Player",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -117,7 +169,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[CS2PlayersSettings.Data.Repository.Entities.Player, CS2PlayersSettings.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[CS2PlayersSettings.Data.Repository.Entities.Players.Player, CS2PlayersSettings.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -169,7 +221,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[CS2PlayersSettings.Data.Repository.Entities.Player, CS2PlayersSettings.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[CS2PlayersSettings.Data.Repository.Entities.Players.Player, CS2PlayersSettings.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -189,7 +241,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[CS2PlayersSettings.Data.Repository.Entities.Team, CS2PlayersSettings.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[CS2PlayersSettings.Data.Repository.Entities.Players.Team, CS2PlayersSettings.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -201,54 +253,18 @@
   },
   {
     "ContainingType": "CS2PlayersSettings.WebApi.Controllers.UserController",
-    "Method": "Logout",
-    "RelativePath": "api/User/logout",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CS2PlayersSettings.WebApi.Controllers.UserController",
-    "Method": "UserLogin",
-    "RelativePath": "api/User/UserLogin",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "model",
-        "Type": "CS2PlayersSettings.Data.Repository.Model.User.LoginDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CS2PlayersSettings.WebApi.Controllers.UserController",
-    "Method": "UserRegister",
-    "RelativePath": "api/User/UserRegister",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userReModel",
-        "Type": "CS2PlayersSettings.Data.Repository.Model.User.RegisterDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CS2PlayersSettings.WebApi.Controllers.UserController",
-    "Method": "VerifyToken",
-    "RelativePath": "api/User/verify",
+    "Method": "GetProfile",
+    "RelativePath": "api/User/profile",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   }
 ]
