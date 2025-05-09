@@ -31,6 +31,8 @@ public partial class Player
 
     public virtual ICollection<CrosshairSetting> CrosshairSettings { get; set; } = new List<CrosshairSetting>();
 
+    public virtual ICollection<Follower> Followers { get; set; } = new List<Follower>();
+
     public virtual ICollection<MouseSetting> MouseSettings { get; set; } = new List<MouseSetting>();
 
     public virtual Team? Team { get; set; }

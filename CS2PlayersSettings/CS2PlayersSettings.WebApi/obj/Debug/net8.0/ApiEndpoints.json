@@ -253,6 +253,48 @@
   },
   {
     "ContainingType": "CS2PlayersSettings.WebApi.Controllers.UserController",
+    "Method": "FollowUser",
+    "RelativePath": "api/User/FollowUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "playerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS2PlayersSettings.WebApi.Controllers.UserController",
+    "Method": "GetUserFollow",
+    "RelativePath": "api/User/GetUserFollow",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS2PlayersSettings.WebApi.Controllers.UserController",
+    "Method": "IsFollowUser",
+    "RelativePath": "api/User/IsFollowUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "playerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS2PlayersSettings.WebApi.Controllers.UserController",
     "Method": "GetProfile",
     "RelativePath": "api/User/profile",
     "HttpMethod": "GET",
@@ -263,6 +305,38 @@
         "Name": "userId",
         "Type": "System.Int32",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS2PlayersSettings.WebApi.Controllers.UserController",
+    "Method": "UnFollowUser",
+    "RelativePath": "api/User/UnFollowUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "playerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS2PlayersSettings.WebApi.Controllers.UserController",
+    "Method": "UpdateUserInfo",
+    "RelativePath": "api/User/UpdateUserInfo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateUser",
+        "Type": "CS2PlayersSettings.Data.Repository.Model.User.UserInfoDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

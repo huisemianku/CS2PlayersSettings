@@ -3,25 +3,22 @@
   "WorkspaceRootPath": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{948ACA2F-7886-4080-BF7F-E153195A7B6B}|..\\CS2PlayersSettings.WebApi\\CS2PlayersSettings.WebApi.csproj|e:\\asp.net core web\\cs2playerssettings\\cs2playerssettings.webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D28EA05D-7E29-44FC-9E40-7974D8BAD20A}|..\\CS2PlayersSettings.Business\\CS2PlayersSettings.Business.csproj|e:\\asp.net core web\\cs2playerssettings\\cs2playerssettings.business\\webapi\\userwebapibll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{948ACA2F-7886-4080-BF7F-E153195A7B6B}|..\\CS2PlayersSettings.WebApi\\CS2PlayersSettings.WebApi.csproj|e:\\asp.net core web\\cs2playerssettings\\cs2playerssettings.webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{948ACA2F-7886-4080-BF7F-E153195A7B6B}|..\\CS2PlayersSettings.WebApi\\CS2PlayersSettings.WebApi.csproj|e:\\asp.net core web\\cs2playerssettings\\cs2playerssettings.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D7ACF93D-9E5C-470B-A311-0CEB0E39ED5E}|..\\CS2PlayersSettings.Data\\CS2PlayersSettings.Data.csproj|e:\\asp.net core web\\cs2playerssettings\\cs2playerssettings.data\\webapi\\iuser\\ifollowerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D7ACF93D-9E5C-470B-A311-0CEB0E39ED5E}|..\\CS2PlayersSettings.Data\\CS2PlayersSettings.Data.csproj|e:\\asp.net core web\\cs2playerssettings\\cs2playerssettings.data\\webapi\\userwebapidal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D28EA05D-7E29-44FC-9E40-7974D8BAD20A}|..\\CS2PlayersSettings.Business\\CS2PlayersSettings.Business.csproj|e:\\asp.net core web\\cs2playerssettings\\cs2playerssettings.business\\webapi\\userwebapibll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{948ACA2F-7886-4080-BF7F-E153195A7B6B}|..\\CS2PlayersSettings.WebApi\\CS2PlayersSettings.WebApi.csproj|e:\\asp.net core web\\cs2playerssettings\\cs2playerssettings.webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{948ACA2F-7886-4080-BF7F-E153195A7B6B}|..\\CS2PlayersSettings.WebApi\\CS2PlayersSettings.WebApi.csproj|e:\\asp.net core web\\cs2playerssettings\\cs2playerssettings.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{D7ACF93D-9E5C-470B-A311-0CEB0E39ED5E}|..\\CS2PlayersSettings.Data\\CS2PlayersSettings.Data.csproj|e:\\asp.net core web\\cs2playerssettings\\cs2playerssettings.data\\repository\\model\\apiresponse\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D28EA05D-7E29-44FC-9E40-7974D8BAD20A}|..\\CS2PlayersSettings.Business\\CS2PlayersSettings.Business.csproj|e:\\asp.net core web\\cs2playerssettings\\cs2playerssettings.business\\playerbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D7ACF93D-9E5C-470B-A311-0CEB0E39ED5E}|..\\CS2PlayersSettings.Data\\CS2PlayersSettings.Data.csproj|e:\\asp.net core web\\cs2playerssettings\\cs2playerssettings.data\\repository\\playerdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,8 +28,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApiResponse.cs",
+              "DocumentMoniker": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Data\\Repository\\Model\\APIResponse\\ApiResponse.cs",
+              "RelativeDocumentMoniker": "..\\CS2PlayersSettings.Data\\Repository\\Model\\APIResponse\\ApiResponse.cs",
+              "ToolTip": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Data\\Repository\\Model\\APIResponse\\ApiResponse.cs",
+              "RelativeToolTip": "..\\CS2PlayersSettings.Data\\Repository\\Model\\APIResponse\\ApiResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T12:41:05.485Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
@@ -55,93 +65,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserWebApiBLL.cs",
-              "DocumentMoniker": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Business\\WebApi\\UserWebApiBLL.cs",
-              "RelativeDocumentMoniker": "..\\CS2PlayersSettings.Business\\WebApi\\UserWebApiBLL.cs",
-              "ToolTip": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Business\\WebApi\\UserWebApiBLL.cs",
-              "RelativeToolTip": "..\\CS2PlayersSettings.Business\\WebApi\\UserWebApiBLL.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA8wB8AAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T13:12:00.147Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UserWebApiDAL.cs",
-              "DocumentMoniker": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Data\\WebApi\\UserWebApiDAL.cs",
-              "RelativeDocumentMoniker": "..\\CS2PlayersSettings.Data\\WebApi\\UserWebApiDAL.cs",
-              "ToolTip": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Data\\WebApi\\UserWebApiDAL.cs",
-              "RelativeToolTip": "..\\CS2PlayersSettings.Data\\WebApi\\UserWebApiDAL.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAIAywE0AAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T13:06:24.184Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.WebApi\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "..\\CS2PlayersSettings.WebApi\\Controllers\\AuthController.cs",
-              "ToolTip": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.WebApi\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "..\\CS2PlayersSettings.WebApi\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAuwFgAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T13:00:57.388Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "UserController.cs",
               "DocumentMoniker": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.WebApi\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "..\\CS2PlayersSettings.WebApi\\Controllers\\UserController.cs",
               "ToolTip": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.WebApi\\Controllers\\UserController.cs",
               "RelativeToolTip": "..\\CS2PlayersSettings.WebApi\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAuwCQAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAQwGIAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T12:29:22.324Z",
+              "WhenOpened": "2025-05-09T12:08:32.491Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PlayerBLL.cs",
-              "DocumentMoniker": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Business\\PlayerBLL.cs",
-              "RelativeDocumentMoniker": "..\\CS2PlayersSettings.Business\\PlayerBLL.cs",
-              "ToolTip": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Business\\PlayerBLL.cs",
-              "RelativeToolTip": "..\\CS2PlayersSettings.Business\\PlayerBLL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAcAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UserWebApiBLL.cs",
+              "DocumentMoniker": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Business\\WebApi\\UserWebApiBLL.cs",
+              "RelativeDocumentMoniker": "..\\CS2PlayersSettings.Business\\WebApi\\UserWebApiBLL.cs",
+              "ToolTip": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Business\\WebApi\\UserWebApiBLL.cs",
+              "RelativeToolTip": "..\\CS2PlayersSettings.Business\\WebApi\\UserWebApiBLL.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwDsAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T12:07:04.586Z",
+              "WhenOpened": "2025-05-09T12:05:09.016Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.WebApi\\Program.cs",
-              "RelativeDocumentMoniker": "..\\CS2PlayersSettings.WebApi\\Program.cs",
-              "ToolTip": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.WebApi\\Program.cs",
-              "RelativeToolTip": "..\\CS2PlayersSettings.WebApi\\Program.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAowEkAAAACAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "IFollowerRepository.cs",
+              "DocumentMoniker": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Data\\WebApi\\IUser\\IFollowerRepository.cs",
+              "RelativeDocumentMoniker": "..\\CS2PlayersSettings.Data\\WebApi\\IUser\\IFollowerRepository.cs",
+              "ToolTip": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Data\\WebApi\\IUser\\IFollowerRepository.cs",
+              "RelativeToolTip": "..\\CS2PlayersSettings.Data\\WebApi\\IUser\\IFollowerRepository.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAowCsAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T09:57:48.662Z",
+              "WhenOpened": "2025-05-09T12:01:14.42Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.WebApi\\appsettings.json",
-              "RelativeDocumentMoniker": "..\\CS2PlayersSettings.WebApi\\appsettings.json",
-              "ToolTip": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.WebApi\\appsettings.json",
-              "RelativeToolTip": "..\\CS2PlayersSettings.WebApi\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-05T14:03:41.499Z",
+              "Title": "PlayerDbContext.cs",
+              "DocumentMoniker": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Data\\Repository\\PlayerDbContext.cs",
+              "RelativeDocumentMoniker": "..\\CS2PlayersSettings.Data\\Repository\\PlayerDbContext.cs",
+              "ToolTip": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Data\\Repository\\PlayerDbContext.cs",
+              "RelativeToolTip": "..\\CS2PlayersSettings.Data\\Repository\\PlayerDbContext.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAA+wCIAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T11:55:12.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserWebApiDAL.cs",
+              "DocumentMoniker": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Data\\WebApi\\UserWebApiDAL.cs",
+              "RelativeDocumentMoniker": "..\\CS2PlayersSettings.Data\\WebApi\\UserWebApiDAL.cs",
+              "ToolTip": "E:\\ASP.NET CORE WEB\\CS2PlayersSettings\\CS2PlayersSettings.Data\\WebApi\\UserWebApiDAL.cs",
+              "RelativeToolTip": "..\\CS2PlayersSettings.Data\\WebApi\\UserWebApiDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T13:06:24.184Z",
               "EditorCaption": ""
             }
           ]

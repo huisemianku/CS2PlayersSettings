@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CS2PlayersSettings.Data.Repository.Entities.Users;
+namespace CS2PlayersSettings.Data.Repository.Entities.Players;
 
 public partial class User
 {
@@ -18,4 +18,6 @@ public partial class User
     public DateTime? CreatedAt { get; set; }
 
     public DateTime? UpdatedAt { get; set; }
+
+    public virtual ICollection<Follower> Followers { get; set; } = new List<Follower>();
 }

@@ -1,17 +1,17 @@
 ﻿using CS2PlayersSettings.Data.Repository;
-using CS2PlayersSettings.Data.Repository.Entities;
-using CS2PlayersSettings.Data.Repository.Entities.Users;
+using CS2PlayersSettings.Data.Repository.Entities.Players;
+using CS2PlayersSettings.Data.Repository.Model.APIResponse;
 using CS2PlayersSettings.Data.Repository.Model.User;
+using CS2PlayersSettings.Data.WebApi.IUser;
 using Isopoh.Cryptography.Argon2;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace CS2PlayersSettings.Data.WebApi
 {
-    public class UserWebApiDAL
+    public class UserWebApiDAL:IFollowerRepository
     {
-        private readonly UserDbContext _userDbContext;
-        public UserWebApiDAL(UserDbContext userDbContext)
+        private readonly PlayerDbContext _userDbContext;
+        public UserWebApiDAL(PlayerDbContext userDbContext)
         {
             _userDbContext = userDbContext;
         }
@@ -81,8 +81,8 @@ namespace CS2PlayersSettings.Data.WebApi
             {
                 if (userId == 0)
                     return null;
-                return  await _userDbContext.Users.FirstOrDefaultAsync(u => u.UserId == userId) ?? new User();
-          
+                return await _userDbContext.Users.FirstOrDefaultAsync(u => u.UserId == userId) ?? new User();
+
             }
             catch (Exception)
             {
@@ -91,5 +91,132 @@ namespace CS2PlayersSettings.Data.WebApi
             }
         }
         #endregion
+
+        #region 更新用户信息
+        public async Task<ApiResponse<User>> UpdateUserInfoAsync(UserInfoDto updateUser, int userId)
+        {
+            var user = await _userDbContext.Users
+                 .FirstOrDefaultAsync(u => u.UserId == userId);
+
+            if (user == null)
+            {
+                return ApiResponse<User>.FailureResult("用户不存在");
+            }
+          
+            if (string.IsNullOrWhiteSpace(updateUser.userName))
+            {
+                return ApiResponse<User>.FailureResult("用户名不能为空");
+            }
+            if (user.Username == updateUser.userName)
+            {
+                return ApiResponse<User>.FailureResult("用户名未更改");
+            }
+            // 只更新用户名
+            user.Username = updateUser.userName; 
+            await _userDbContext.SaveChangesAsync();
+
+            return ApiResponse<User>.SuccessResult(user, "用户信息更新成功");
+        }
+
+        #endregion
+
+        #region 用户关注
+        public async Task<ApiResponse<bool>> FollowPlayer(int userId, int playerId)
+        {
+            try
+            {
+                ApiResponse<bool> isfolw = await IsFollowing(userId, playerId);
+                // 检查是否已关注
+                if (isfolw.Success)
+                {
+                    return ApiResponse<bool>.FailureResult("已经关注");
+                }
+
+                var follower = new Follower
+                {
+                    UsersId = userId,
+                    PlayersId = playerId,
+                    CreatedAt = DateTime.UtcNow
+                };
+
+                _userDbContext.Followers.Add(follower);
+                await _userDbContext.SaveChangesAsync();
+                return ApiResponse<bool>.SuccessResult(true, "关注成功");
+            }
+            catch (Exception ex)
+            {
+                // 记录错误日志
+                return ApiResponse<bool>.FailureResult($"关注失败：{ex.Message}");
+            }
+        }
+
+        public async Task<ApiResponse<bool>> UnfollowPlayer(int userId, int playerId)
+        {
+            try
+            {
+                var follower = await _userDbContext.Followers
+                    .FirstOrDefaultAsync(f => f.UsersId == userId && f.PlayersId == playerId);
+
+                if (follower == null)
+                {
+                    return ApiResponse<bool>.FailureResult("未关注");
+                }
+
+                _userDbContext.Followers.Remove(follower);
+                await _userDbContext.SaveChangesAsync();
+                return ApiResponse<bool>.SuccessResult(true, "取消关注成功");
+            }
+            catch (Exception ex)
+            {
+                // 记录错误日志
+                return ApiResponse<bool>.FailureResult($"取消关注失败：{ex.Message}");
+            }
+        }
+
+        public async Task<ApiResponse<bool>> IsFollowing(int userId, int playerId)
+        {
+            try
+            {
+                bool isFollowing = await _userDbContext.Followers
+                    .AnyAsync(f => f.UsersId == userId && f.PlayersId == playerId);
+                if (isFollowing)
+                {
+                    return ApiResponse<bool>.SuccessResult(isFollowing,"已关注");
+                }else
+                {
+                    return ApiResponse<bool>.FailureResult("未关注");
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                // 记录错误日志
+                return ApiResponse<bool>.FailureResult($"检查关注状态失败：{ex.Message}");
+            }
+        }
+
+        public async Task<List<Player>> GetFollowedPlayers(int userId)
+        {
+            try
+            {
+                List<Player> followPlayers = await _userDbContext.Followers
+                    .Where(f => f.UsersId == userId)
+                    .Select(p => p.Players)
+                    .ToListAsync();
+                return followPlayers;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public Task<ApiResponse<List<User>>> GetFollowersOfPlayer(int playerId)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+
     }
 }

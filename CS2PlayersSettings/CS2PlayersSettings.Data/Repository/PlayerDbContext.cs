@@ -18,16 +18,19 @@ public partial class PlayerDbContext : DbContext
 
     public virtual DbSet<CrosshairSetting> CrosshairSettings { get; set; }
 
+    public virtual DbSet<Follower> Followers { get; set; }
+
     public virtual DbSet<MouseSetting> MouseSettings { get; set; }
 
     public virtual DbSet<Player> Players { get; set; }
 
     public virtual DbSet<Team> Teams { get; set; }
 
+    public virtual DbSet<User> Users { get; set; }
+
     public virtual DbSet<VideoSetting> VideoSettings { get; set; }
 
     public virtual DbSet<ViewmodelSetting> ViewmodelSettings { get; set; }
-
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -46,6 +49,35 @@ public partial class PlayerDbContext : DbContext
                 .HasForeignKey(d => d.PlayerId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Crosshair__playe__4E88ABD4");
+        });
+
+        modelBuilder.Entity<Follower>(entity =>
+        {
+            entity.HasKey(e => e.FollowerId).HasName("PK__Follower__E3B0943A35DA329D");
+
+            entity.HasIndex(e => e.PlayersId, "idx_player_id");
+
+            entity.HasIndex(e => e.UsersId, "idx_user_id");
+
+            entity.HasIndex(e => new { e.UsersId, e.PlayersId }, "unique_follow").IsUnique();
+
+            entity.Property(e => e.FollowerId).HasColumnName("Follower_id");
+            entity.Property(e => e.CreatedAt)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime")
+                .HasColumnName("Created_at");
+            entity.Property(e => e.PlayersId).HasColumnName("Players_id");
+            entity.Property(e => e.UsersId).HasColumnName("Users_id");
+
+            entity.HasOne(d => d.Players).WithMany(p => p.Followers)
+                .HasForeignKey(d => d.PlayersId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Followers__Playe__57A801BA");
+
+            entity.HasOne(d => d.Users).WithMany(p => p.Followers)
+                .HasForeignKey(d => d.UsersId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Followers__Users__56B3DD81");
         });
 
         modelBuilder.Entity<MouseSetting>(entity =>
@@ -104,6 +136,28 @@ public partial class PlayerDbContext : DbContext
 
             entity.Property(e => e.TeamImg).HasMaxLength(120);
             entity.Property(e => e.TeamName).HasMaxLength(50);
+        });
+
+        modelBuilder.Entity<User>(entity =>
+        {
+            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CC4CCA7FEE91");
+
+            entity.HasIndex(e => e.Username, "UQ__Users__536C85E4F1AE69EE").IsUnique();
+
+            entity.HasIndex(e => e.Email, "UQ__Users__A9D1053415B585B9").IsUnique();
+
+            entity.Property(e => e.CreatedAt)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.Email).HasMaxLength(100);
+            entity.Property(e => e.PasswordHash).HasMaxLength(255);
+            entity.Property(e => e.Roles)
+                .HasMaxLength(20)
+                .HasDefaultValue("user");
+            entity.Property(e => e.UpdatedAt)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.Username).HasMaxLength(50);
         });
 
         modelBuilder.Entity<VideoSetting>(entity =>

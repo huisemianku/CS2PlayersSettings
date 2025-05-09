@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CS2PlayersSettings.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+92f5ea80d46926e5bd9ccb01b0152089e43e8a87")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+138c3e987a53633cae6e24bef595942498d3ed31")]
 [assembly: System.Reflection.AssemblyProductAttribute("CS2PlayersSettings.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CS2PlayersSettings.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -261,7 +261,7 @@ namespace CS2PlayersSettings.Data.WebApi
                     MouseSettings = await GetPlayerMouseSettingsById(playerId),
                     CrosshairSettings = await GetPlayerCrosshairsById(playerId),
                     ViewmodelSettings = await GetPlayerViewmodelById(playerId),
-                    //VideoSettings = await GetPlayerVideoById(playerId)
+                    VideoSettings = await GetPlayerVideoById(playerId)
                 };
                 return playerSettings;
             }
